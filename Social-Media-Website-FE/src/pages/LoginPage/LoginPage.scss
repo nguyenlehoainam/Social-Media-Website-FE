@@ -1,0 +1,154 @@
+$bg-dark: #111827;
+$bg-card: #1f2937;
+$bg-input: #374151;
+$border-color: #4b5563;
+$text-primary: #ffffff;
+$text-secondary: #9ca3af;
+$blue: #60a5fa;
+$purple: #a78bfa;
+$blue-dark: #3b82f6;
+$purple-dark: #8b5cf6;
+
+.login-page {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.login-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $bg-dark;
+  color: $text-primary;
+  font-family: "Inter", sans-serif;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 28rem;
+  padding: 2rem;
+  background-color: $bg-card;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    background: linear-gradient(to right, $blue, $purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    color: $text-secondary;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  label {
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $text-secondary;
+    margin-bottom: 0.5rem;
+    align-items: left;
+  }
+
+  .password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-size: 0.875rem;
+      color: $blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: $bg-input;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    color: $text-primary;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: #6b7280;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $blue;
+      box-shadow: 0 0 0 4px rgba($blue, 0.3);
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    color: $text-primary;
+    background: linear-gradient(to right, $blue-dark, $purple-dark);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba($purple, 0.4);
+    }
+  }
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  text-align: center;
+  color: $text-secondary;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  margin-top: 2rem;
+
+  a {
+    font-weight: 500;
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

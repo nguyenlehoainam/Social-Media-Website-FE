@@ -1,0 +1,56 @@
+import React from "react";
+import "./LoginPage.scss";
+const LoginPage = () => {
+  return (
+    <div className="login-page">
+      <div className="login-page-container">
+        <div className="login-card">
+          <div className="login-header">
+            <h1>Welcome to vinbook</h1>
+            <p>Sign in to continue to your account</p>
+          </div>
+
+          <form className="login-form">
+            <div className="input-group">
+              <div>
+                <label htmlFor="email">Email Address</label>
+              </div>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                placeholder="nguyenlehoainam@gmail.com"
+              />
+            </div>
+
+            <div className="input-group">
+              <div className="password-label">
+                <label htmlFor="password">Password</label>
+              </div>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                placeholder="••••••••"
+              />
+            </div>
+            <div className="input-group">
+              <button type="submit">Sign In</button>
+            </div>
+          </form>
+
+          <p className="footer-text">
+            <a href="#">Register!</a>
+            <a href="/forgot-password">Forgot password?</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LoginPage;
