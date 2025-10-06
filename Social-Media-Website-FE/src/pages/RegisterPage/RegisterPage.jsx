@@ -43,7 +43,9 @@ function RegisterPage() {
               />
             </div>
           </div>
-          <button className="register-btn">register</button>
+          <button className="register-btn" type="submit">
+            register
+          </button>
           <div className="footer-text">
             <a href="/">Login!</a>
             <a href="/forgot-password">ForgotPassword?</a>
