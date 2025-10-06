@@ -3,6 +3,7 @@ import LoginPage from "./pages/loginPage/loginPage";
 import "./App.scss";
 import { useRoutes } from "react-router-dom";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage/ForgotPasswordPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 const App = () => {
   const elements = useRoutes([
@@ -13,6 +14,10 @@ const App = () => {
     {
       path: "/forgot-password",
       element: <ForgotPasswordPage />,
+    },
+    {
+      path: "/register",
+      element: <RegisterPage />,
     },
   ]);
   return <>{elements}</>;

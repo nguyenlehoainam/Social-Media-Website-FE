@@ -44,7 +44,7 @@ const LoginPage = () => {
           </form>
 
           <p className="footer-text">
-            <a href="#">Register!</a>
+            <a href="/register">Register!</a>
             <a href="/forgot-password">Forgot password?</a>
           </p>
         </div>
