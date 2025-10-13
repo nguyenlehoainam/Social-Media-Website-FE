@@ -1,6 +1,11 @@
 import React from "react";
 import "./LoginPage.scss";
 const LoginPage = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+  };
+
   return (
     <div className="login-page">
       <div className="login-page-container">
@@ -39,7 +44,9 @@ const LoginPage = () => {
               />
             </div>
             <div className="input-group">
-              <button type="submit">Sign In</button>
+              <button onClick={handleSubmit} type="submit">
+                Sign In
+              </button>
             </div>
           </form>
 
