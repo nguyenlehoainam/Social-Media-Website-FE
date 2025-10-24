@@ -5,6 +5,7 @@ import { useRoutes } from "react-router-dom";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage/ForgotPasswordPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
 const App = () => {
   const elements = useRoutes([
@@ -19,6 +20,10 @@ const App = () => {
     {
       path: "/register",
       element: <RegisterPage />,
+    },
+    {
+      path: "/profile",
+      element: <ProfilePage />,
     },
   ]);
   return <>{elements}</>;

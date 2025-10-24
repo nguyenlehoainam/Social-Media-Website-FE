@@ -3,7 +3,6 @@ import "./LoginPage.scss";
 const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
   };
 
   return (
