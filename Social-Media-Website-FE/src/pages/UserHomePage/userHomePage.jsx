@@ -3,7 +3,7 @@ import { Pagination } from 'antd'
 import toast from 'react-hot-toast'
 import CreatePost from '../../components/createPost/createPost'
 import PostCard from '../../components/postCard/postCard'
-import SidebarWidget from '../../components/SidebarWidget/sidebarWidget'
+import SidebarWidget from '../../components/sidebarWidget/SidebarWidget'
 import { getPostsApi } from '../../apis/posts.api'
 import './UserHomePage.scss'
 
