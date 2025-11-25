@@ -5,7 +5,7 @@ import CreatePost from '../../components/createPost/createPost'
 import PostCard from '../../components/postCard/postCard'
 import SidebarWidget from '../../components/SidebarWidget/sidebarWidget'
 import { getPostsApi } from '../../apis/posts.api'
-import './userHomePage.scss'
+import './UserHomePage.scss'
 
 const UserHomePage = () => {
   const [pagination, setPagination] = useState({

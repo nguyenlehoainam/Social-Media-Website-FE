@@ -4,7 +4,7 @@ import Header from '../../common/header/header'
 import Footer from '../../common/footer/footer'
 import SidebarWidget from '../../components/SidebarWidget/sidebarWidget'
 import { getPostsApi, getEventApi, getJobApi } from '../../apis/posts.api'
-import './mainLayout.scss'
+import './MainLayout.scss'
 import toast from 'react-hot-toast'
 
 const MainLayout = () => {
