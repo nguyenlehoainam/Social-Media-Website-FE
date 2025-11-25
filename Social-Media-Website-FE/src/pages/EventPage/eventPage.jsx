@@ -5,7 +5,7 @@ import CreatePost from '../../components/createPost/createPost'
 import PostCard from '../../components/postCard/postCard'
 import SidebarWidget from '../../components/SidebarWidget/sidebarWidget'
 import { getEventApi, getPostsApi } from '../../apis/posts.api'
-import './eventPage.scss'
+import './EventPage.scss'
 import { current } from '@reduxjs/toolkit'
 import EventPostCard from '../../components/eventPostCard/evenPostCard'
 

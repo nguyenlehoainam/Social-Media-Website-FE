@@ -5,7 +5,7 @@ import CreatePost from '../../components/createPost/createPost'
 import PostCard from '../../components/postCard/postCard'
 import SidebarWidget from '../../components/SidebarWidget/sidebarWidget'
 import { getEventApi, getPostsApi, getJobApi } from '../../apis/posts.api'
-import './jobPage.scss'
+import './JobPage.scss'
 import JobPostCard from '../../components/jobPostCard/jobPostCard'
 
 const JobPage = () => {
