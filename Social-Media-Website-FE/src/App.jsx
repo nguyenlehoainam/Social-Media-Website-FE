@@ -12,10 +12,10 @@ import EventForm from './components/admin/event/EventForm'
 import LayoutAdmin from './layouts/LayoutAdmin/LayoutAdmin'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
 import toast, { Toaster } from 'react-hot-toast'
-import EventPage from './pages/EventPage/EventPage'
-import JobPage from './pages/JobPage/JobPage'
 import useAuth from './hooks/useAuth'
 import { useEffect } from 'react'
+import EventPage from './pages/EventPage/eventPage'
+import JobPage from './pages/JobPage/jobPage'
 function App() {
   const currentUser = useAuth()
   const role = currentUser.user?.role || []
