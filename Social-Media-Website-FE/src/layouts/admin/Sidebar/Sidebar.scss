@@ -1,0 +1,30 @@
+@use "../../../styles/index" as style;
+.admin{
+    &__sidebar{
+        width: 300px;
+        background-color: style.$primary-color;
+        color: white;
+        height: 100vh;
+        &__image{
+            display: flex;
+            justify-content: center;
+            padding: 20px 0px;
+        }
+        &__menu{
+            li{
+                list-style-type: none;
+                border: 1px solid #FFA573;
+                font-weight:500;
+                font-size: 18px;
+                padding: 20px 20px;
+                cursor: pointer;
+                &:hover{
+                    background-color: style.$secondary-color;
+                }
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+}

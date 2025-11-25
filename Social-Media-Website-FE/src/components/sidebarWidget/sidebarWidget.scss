@@ -1,0 +1,102 @@
+// --- Biến màu ---
+$primary-orange: #ff8a00;
+$card-bg: #ffffff;
+$text-color-dark: #333;
+$text-light: #888;
+
+// --- Style cho toàn bộ widget ---
+.sidebar-widget {
+  background-color: $card-bg;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.widget-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  color: $text-color-dark;
+  letter-spacing: 0.5px;
+}
+
+.widget-view-more {
+  display: flex;
+  align-items: center;
+  color: $primary-orange;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  gap: 4px;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.widget-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.widget-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid #f0f2f5;
+}
+
+.item-date {
+  background-color: #fff3e0;
+  color: $primary-orange;
+  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+  .date-day {
+    font-size: 1.2rem;
+  }
+  .date-month {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  font-weight: 600;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.item-details {
+  color: $text-light;
+  font-size: 0.85rem;
+}
+.widget-item-empty {
+  color: $text-light;
+  font-size: 0.9rem;
+  padding: 12px 0;
+  text-align: center;
+  border-top: 1px solid #f0f2f5;
+}

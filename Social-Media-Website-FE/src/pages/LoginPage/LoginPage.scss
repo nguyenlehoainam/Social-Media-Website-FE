@@ -22,7 +22,7 @@ $purple-dark: #8b5cf6;
   min-height: 100vh;
   background-color: $bg-dark;
   color: $text-primary;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .login-card {
@@ -62,15 +62,30 @@ $purple-dark: #8b5cf6;
 .login-form {
   display: block;
   gap: 1rem;
+  gap: 20px;
 }
 
 .input-group {
+  position: relative;
+
+  .toggle-icon {
+    position: absolute;
+    right: 1rem;
+    top: 32%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: $text-secondary;
+
+    &:hover {
+      color: $blue;
+    }
+  }
   label {
     display: flex;
     font-size: 0.875rem;
     font-weight: 500;
     color: $text-secondary;
-    // margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     align-items: left;
   }
 
@@ -98,6 +113,7 @@ $purple-dark: #8b5cf6;
     color: $text-primary;
     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
+    margin-bottom: 2rem;
 
     &::placeholder {
       color: #6b7280;

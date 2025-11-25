@@ -1,0 +1,30 @@
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+    // --- Responsive ---
+    .layout-sidebar {
+      display: none; // Ẩn sidebar trên màn hình nhỏ
+    }
+    .layout-content {
+      flex: 1;
+    }
+  }
+}
+
+@mixin small-tablet {
+  @media (min-width: 480px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 320px) and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin flex($js: unset, $align: unset) {
+  display: flex;
+  justify-content: $js;
+  align-items: $align;
+}

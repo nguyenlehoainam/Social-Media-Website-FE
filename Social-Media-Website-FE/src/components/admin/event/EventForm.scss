@@ -1,0 +1,43 @@
+@use '../../../styles/index' as style;
+
+.event-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 28px;
+    color: style.$secondary-color;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}
+
+.event-form {
+  width: 500px;
+
+  input,
+  .datetime {
+    padding: 10px 20px;
+  }
+  button {
+    width: 100px;
+    padding: 20px 32px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .btnSubmit {
+    background-color: style.$secondary-color;
+    color: white;
+  }
+
+  .btnCancel {
+    background-color: transparent;
+    border: 1px solid style.$secondary-color;
+    color: style.$secondary-color;
+  }
+}

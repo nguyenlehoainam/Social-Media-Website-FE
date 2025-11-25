@@ -1,0 +1,67 @@
+@use "../../../styles/index" as style;
+.delete-member{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 100vh;
+    position:absolute;
+    inset: 0;
+    .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5); // hoặc bất kỳ màu nào
+            z-index: 10; // nhớ để trên các phần khác
+        }
+    &__container{
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: max-content;
+        box-shadow: 0px 3px 12px 0px #FFA573; 
+        padding: 40px 32px;
+        background-color: white;
+        z-index: 20;
+        position: relative;
+        .close-icon {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                cursor: pointer;
+                font-size: 32px;
+                color: style.$secondary-color;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }    
+       button {
+            width: 100px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn_ok {
+            background-color: style.$secondary-color;
+            color: white;
+            border: none;
+            margin-left: 20px;
+        }
+        .btn_cancel {
+            background-color: transparent;
+            color: style.$secondary-color;
+            border: 1px solid style.$secondary-color;
+            
+        }
+    }
+}

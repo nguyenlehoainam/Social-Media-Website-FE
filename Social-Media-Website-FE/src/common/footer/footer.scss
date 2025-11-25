@@ -1,0 +1,72 @@
+@use '../../styles/index' as *;
+
+.main-footer {
+  background-color: $white-color;
+  padding: 5px 20px;
+  margin-top: 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  justify-self: end;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+
+    .footer-logo {
+      width: 50px;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .footer-socials {
+    display: flex;
+    width: 140px;
+    height: 38px;
+    a {
+      margin-left: 20px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .footer-copyright {
+    font-size: $font-size-sm;
+    color: $light-text-color;
+    margin-right: 20px;
+    padding-left: 20px;
+  }
+  .center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      object-fit: contain;
+    }
+  }
+  .footer-links {
+    display: flex;
+    p {
+      color: $light-text-color;
+      font-size: $font-size-sm;
+      text-decoration: none;
+      margin-right: 26px;
+    }
+  }
+}

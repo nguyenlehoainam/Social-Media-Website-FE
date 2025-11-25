@@ -1,0 +1,236 @@
+// Biến để dễ quản lý
+$border-color: #e0e0e0;
+$placeholder-color: #65676b;
+$primary-orange: #ff8a00;
+$primary-orange-hover: #e57a00;
+
+.create-post-card {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+
+  .create-post-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 24px;
+  }
+
+  .create-post-placeholder {
+    color: #555;
+    font-size: 1rem;
+  }
+}
+
+.create-post-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.create-post-modal-content {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+
+  .close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #606770;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: #f0f2f5;
+    }
+  }
+}
+
+.modal-user-info {
+  display: flex;
+  align-items: center;
+
+  .modal-user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .user-name {
+      font-weight: 600;
+    }
+
+    .post-audience-text {
+      font-size: 0.85rem;
+      color: $placeholder-color;
+      background-color: #e4e6eb;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.modal-body {
+  padding: 16px 24px;
+  overflow-y: auto;
+  flex-grow: 1;
+  border-top: 1px solid $border-color;
+
+  .modal-input-title,
+  .modal-textarea-description {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    padding: 0;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .modal-input-title {
+    font-size: 1.5rem; // Tiêu đề to hơn
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .modal-textarea-description {
+    font-size: 1.1rem;
+    min-height: 120px;
+  }
+
+  .image-preview {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 16px;
+  }
+}
+
+.modal-add-ons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-top: 1px solid $border-color;
+
+  .add-ons-title {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .add-ons-icons {
+    display: flex;
+    gap: 8px;
+    .icon-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: $placeholder-color;
+      padding: 8px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background-color: #f0f2f5;
+      }
+    }
+  }
+}
+
+.modal-error {
+  color: #d8000c;
+  font-size: 0.9rem;
+  padding: 0 24px;
+  margin-top: 10px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-top: 1px solid $border-color;
+
+  .type-selector {
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    p {
+      margin-left: 4px;
+      border-radius: 6px;
+      padding: 4px 8px;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .modal-submit-button {
+    background-color: $primary-orange;
+    color: #fff;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $primary-orange-hover;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
