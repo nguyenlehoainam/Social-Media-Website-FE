@@ -17,7 +17,7 @@ import useAuth from './hooks/useAuth'
 import { useEffect } from 'react'
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton'
 import EventPage from './pages/EventPage/EventPage'
-import UserHomePage from './pages/userHomePage/UserHomePage'
+import UserHomePage from './pages/UserHomePage/UserHomePage'
 import MyPosts from './components/myPosts/MyPosts'
 import JobPage from './pages/jobPage/JobPage'
 
