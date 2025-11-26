@@ -16,10 +16,10 @@ import toast, { Toaster } from 'react-hot-toast'
 import useAuth from './hooks/useAuth'
 import { useEffect } from 'react'
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton'
-import EventPage from './pages/EventPage/eventPage'
-import UserHomePage from './pages/userHomePage/userHomePage'
-import MyPosts from './components/myPosts/myPosts'
-import JobPage from './pages/JobPage/jobPage'
+import EventPage from './pages/EventPage/EventPage'
+import UserHomePage from './pages/userHomePage/UserHomePage'
+import MyPosts from './components/myPosts/MyPosts'
+import JobPage from './pages/jobPage/JobPage'
 
 function App() {
   const currentUser = useAuth()
