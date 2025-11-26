@@ -7,8 +7,9 @@ import { Pagination } from 'antd'
 import Import from '../../../components/admin/import/Import'
 import Delete from '../../../components/admin/delete/Delete'
 import { getAllEvents } from '../../../apis/events.api'
-import { current } from '@reduxjs/toolkit'
+import { IoMdAddCircle } from 'react-icons/io'
 import dayjs from 'dayjs'
+import toast from 'react-hot-toast'
 
 function Events() {
   const navigate = useNavigate()
@@ -126,12 +127,9 @@ function Events() {
         page: pagination.current,
         size: pagination.size,
       })
-      console.log('Get All Events', response)
       setEvents(response?.data)
     } catch (error) {
-      console.error(error)
-      console.log("Sai su kien get all events");
-      
+      toast.error(error)
     } finally {
       setLoading(false)
     }
@@ -153,8 +151,7 @@ function Events() {
         item.title
           ?.toLowerCase()
           .split(' ')
-          .some((word) => word === value) ||
-        item.organizer?.toLowerCase().includes(value) 
+          .some((word) => word === value) || item.organizer?.toLowerCase().includes(value)
         // ||
         // item.email?.toLowerCase().includes(value)
       )
@@ -172,7 +169,9 @@ function Events() {
           />
         </div>
         <div className='members-toolbar__actions'>
-          <button className='button button--search' onClick={() => handleSearch()}>Tìm kiếm</button>
+          <button className='button button--search' onClick={() => handleSearch()}>
+            Tìm kiếm
+          </button>
           <div style={{ marginLeft: '400px' }}>
             <button className='button button--add' onClick={handleCreate}>
               Thêm
@@ -182,8 +181,8 @@ function Events() {
               onClick={handleImport}
               style={{ marginLeft: '10px' }}>
               Import
-            </button>
-          </div>
+            </button> 
+           </div> 
         </div>
       </div>
       <Table
@@ -201,7 +200,7 @@ function Events() {
         <Pagination
           align='end'
           defaultCurrent={pagination.current}
-          total={searchValue ? filteredData.length :events?.totalElements}
+          total={searchValue ? filteredData.length : events?.totalElements}
           pageSize={pagination.size}
           showSizeChanger
           onChange={handlePageChange}

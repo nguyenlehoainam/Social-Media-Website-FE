@@ -1,41 +1,36 @@
-// --- Biến màu ---
-$primary-orange: #ff8a00;
-$card-bg: #ffffff;
-$text-color-dark: #333;
-$text-light: #888;
+@use '../../styles/index' as *;
 
-// --- Style cho toàn bộ widget ---
 .sidebar-widget {
-  background-color: $card-bg;
-  border-radius: 16px;
-  padding: 20px 24px;
+  background-color: $white-color;
+  border-radius: 12px;
+  padding: 20px;
   margin-bottom: 24px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .widget-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .widget-title {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   margin: 0;
-  text-transform: uppercase;
-  color: $text-color-dark;
-  letter-spacing: 0.5px;
+  color: #333;
 }
 
 .widget-view-more {
   display: flex;
   align-items: center;
-  color: $primary-orange;
+  color: $primary-color;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   gap: 4px;
   transition: opacity 0.2s ease;
   &:hover {
@@ -55,14 +50,21 @@ $text-light: #888;
   gap: 16px;
   padding: 12px 0;
   border-top: 1px solid #f0f2f5;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #fafafa;
+  }
 }
 
 .item-date {
   background-color: #fff3e0;
-  color: $primary-orange;
+  color: $primary-color;
   border-radius: 8px;
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,22 +83,33 @@ $text-light: #888;
 .item-info {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .item-title {
   font-weight: 600;
   color: #444;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item-details {
   color: $text-light;
   font-size: 0.85rem;
 }
-.widget-item-empty {
-  color: $text-light;
-  font-size: 0.9rem;
-  padding: 12px 0;
-  text-align: center;
-  border-top: 1px solid #f0f2f5;
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  max-height: 100px;
+  min-height: 0;
+}
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,45 +1,85 @@
-import React, { useState } from 'react'
-import {
-  HandThumbsUpFill,
-  HandThumbsUp,
-  Chat,
-  BookmarkFill,
-  Bookmark,
-  Handbag,
-} from 'react-bootstrap-icons'
+import React, { useEffect, useState } from 'react'
+import { HandThumbsUpFill, HandThumbsUp, Chat, Handbag } from 'react-bootstrap-icons'
 import toast from 'react-hot-toast'
-// import { likePostApi, applyToPostApi, bookmarkPostApi } from '../../apis/posts.api'
 import './jobPostCard.scss'
+import { likePostApi, dellikePostApi } from '../../apis/posts.api'
+import ImportCvModal from '../importcv/importcv'
+import { useSelector } from 'react-redux'
+import { info } from '../../apis/userProfile.api'
 
-const JobPostCard = ({ post }) => {
-  const [isLiked, setIsLiked] = useState(post.reacted || false)
-  const [likeCount, setLikeCount] = useState(post.countReaction || 0)
-  const [isBookmarked, setIsBookmarked] = useState(post.bookmarked || false)
+const JobPostCard = ({ post, onViewDetail, onLikeToggled }) => {
+  const authState = useSelector((state) => state.auth.auth)
+  const currentUser = authState
   const [isLoadingApply, setIsLoadingApply] = useState(false)
-
+  const [isLiked, setIsLiked] = useState(post?.checkReaction || false)
+  const [likeCount, setLikeCount] = useState(post?.countReaction || 0)
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false)
+  const [isUpdate, setIsupdate] = useState(false)
+  const [infoUser, setInfoUser] = useState()
   const handleLike = async () => {
     const originalLikedState = isLiked
-    const originalLikeCount = likeCount
-    setIsLiked(!isLiked)
-    setLikeCount(isLiked ? likeCount - 1 : likeCount + 1)
+    const newLikedState = !originalLikedState
+    const targetId = post.postId || post.eventId
+
+    setIsLiked(newLikedState)
+    setLikeCount((prev) => (newLikedState ? prev + 1 : prev - 1))
+
     try {
-      await likePostApi(post.id)
+      if (originalLikedState) {
+        await dellikePostApi({
+          targetId: post.postId,
+          targetType: 'JOB',
+        })
+        setIsLiked(false)
+        setLikeCount(likeCount - 1)
+      } else {
+        const response = await likePostApi({
+          targetId: post.postId,
+          targetType: 'JOB',
+          emotionType: 'LIKE',
+        })
+
+        if (onLikeToggled) {
+          const newLikeCount = newLikedState ? likeCount + 1 : likeCount - 1
+          onLikeToggled(targetId, newLikedState, newLikeCount)
+        }
+      }
     } catch (error) {
+      toast.error('Đã có lỗi xảy ra khi thực hiện thao tác.')
       setIsLiked(originalLikedState)
       setLikeCount(originalLikeCount)
-      toast.error('Đã có lỗi xảy ra.')
+    }
+  }
+  useEffect(() => {
+    setIsLiked(post.checkReaction)
+    setLikeCount(post.countReaction)
+  }, [post.checkReaction, post.countReaction])
+  const fetchUser = async () => {
+    try {
+      const response = await info()
+      const userData = response?.data?.fullName
+      setInfoUser(userData)
+    } catch (err) {
+      toast.error('Lỗi khi tải thông tin người dùng')
     }
   }
 
-  const handleApply = async () => {
-    setIsLoadingApply(true)
-    try {
-      await applyToPostApi(post.id)
-      toast.success('Ứng tuyển thành công!')
-    } catch (error) {
-      toast.error(error.response?.data?.message || 'Ứng tuyển không thành công.')
-    } finally {
-      setIsLoadingApply(false)
+  useEffect(() => {
+    if (currentUser) {
+      fetchUser()
+    }
+  }, [currentUser])
+
+  const handleApply = () => {
+    setIsCvModalOpen(true)
+  }
+  const handleUpdate = () => {
+    setIsupdate(true)
+  }
+
+  const handleOpenDetail = () => {
+    if (onViewDetail) {
+      onViewDetail(post)
     }
   }
 
@@ -69,10 +109,11 @@ const JobPostCard = ({ post }) => {
           <button onClick={handleLike} className={`action-button ${isLiked ? 'active' : ''}`}>
             {isLiked ? <HandThumbsUpFill /> : <HandThumbsUp />} <span>{likeCount}</span>
           </button>
-          <button className='action-button'>
+          <button onClick={handleOpenDetail} className='action-button'>
             <Chat /> <span>{post.countComment}</span>
           </button>
-          {post.targetType === 'JOB' && (
+
+          {post?.creator?.fullName !== infoUser && (
             <button
               onClick={handleApply}
               className='action-button apply-button'
@@ -81,10 +122,11 @@ const JobPostCard = ({ post }) => {
             </button>
           )}
         </div>
-        <button className={`action-button ${isBookmarked ? 'active' : ''}`}>
-          {isBookmarked ? <BookmarkFill /> : <Bookmark />}
-        </button>
       </div>
+
+      {isCvModalOpen && (
+        <ImportCvModal postId={post.postId} onClose={() => setIsCvModalOpen(false)} />
+      )}
     </div>
   )
 }

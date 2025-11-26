@@ -1,113 +1,136 @@
 @use '../../../styles//index' as style;
 
 .events-page {
-    &__title {
-        margin-bottom: 20px;
+  &__title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    color: style.$secondary-color;
+  }
+
+  .members-toolbar {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    &__search input {
+      padding: 12px 20px;
+      width: 350px;
+      border: 1px solid style.$secondary-color;
+      outline: none;
+      border-radius: 4px;
+
+      &::placeholder {
+        color: rgba(128, 128, 128, 0.359);
+      }
+    }
+
+    &__actions {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      width: 100%;
+
+      .button {
+        cursor: pointer;
+
+        border-radius: 4px;
+        color: white;
         font-weight: bold;
-        font-size: 24px;
-        color: style.$secondary-color;
-    }
-
-    .members-toolbar {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 20px;
-
-        &__search input {
-            padding: 12px 20px;
-            width: 350px;
-            border: 1px solid style.$secondary-color;
-            outline: none;
-            border-radius: 4px;
-
-            &::placeholder {
-                color: rgba(128, 128, 128, 0.359);
-            }
-        }
-
-        &__actions {
-            display: flex;
-            gap: 10px;
-
-            .button {
-                cursor: pointer;
-                padding: 12px;
-                width: 100px;
-                border-radius: 4px;
-                color: white;
-                font-weight: bold;
-                font-size: 14px;
-                border: none;
-
-                &--search {
-                    background-color: style.$secondary-color;
-                }
-
-                &--add {
-                    background-color: style.$secondary-color;
-                }
-
-                &--import {
-                    background-color: style.$secondary-color;
-                }
-
-                &:hover {
-                    background-color: #f57c00;
-                }
-            }
-        }
-    }
-
-    .table-action {
-        button {
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        &__edit {
-            background-color: #1dcba8;
-            transition: 0.2s ease;
-            color: white;
-            width: 70px;
-            &:hover {
-                background-color: #00b69b;
-            }
-        }
-
-        &__delete {
-            background-color: #f77a6c;
-            margin-left: 20px;
-            transition: 0.2s ease;
-            color: white;
-            width: 70px;
-            &:hover {
-                background-color: #ed4232;
-            }
-        }
-    }
-
-
-    .ant-table-tbody>tr>td {
-        padding: 6px 8px;
-    }
-
-    .ant-pagination {
         font-size: 14px;
+        border: none;
+        width: 100px;
+        padding: 12px;
+
+        &--search {
+          background-color: style.$secondary-color;
+        }
+
+        // &--import {
+        //     background-color: style.$secondary-color;
+        // }
+
+        &:hover {
+          background-color: #f57c00;
+        }
+      }
+      .button-add {
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        gap: 8px;
+        width: 100px;
+        border: 1px solid style.$secondary-color;
+        padding: 4px 8px;
+        color: style.$secondary-color;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid #f57c00;
+          color: #f57c00;
+        }
+      }
+
+      .icon-add {
+        font-size: 32px;
+      }
+
+      .title-add {
+        font-weight: bold;
+            font-size: 14px;
+      }
     }
+  }
+
+  .table-action {
+    button {
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    &__edit {
+      background-color: #1dcba8;
+      transition: 0.2s ease;
+      color: white;
+      width: 70px;
+      &:hover {
+        background-color: #00b69b;
+      }
+    }
+
+    &__delete {
+      background-color: #f77a6c;
+      margin-left: 20px;
+      transition: 0.2s ease;
+      color: white;
+      width: 70px;
+      &:hover {
+        background-color: #ed4232;
+      }
+    }
+  }
+
+  .ant-table-tbody > tr > td {
+    padding: 6px 8px;
+  }
+
+  .ant-pagination {
+    font-size: 14px;
+  }
 }
 
-.ant-input, .ant-picker{
-    &:hover{
-       border: 1px solid #ed4232 !important; 
-    }
+.ant-input,
+.ant-picker {
+  &:hover {
+    border: 1px solid #ed4232 !important;
+  }
 }
 .no-scrollbar .ant-table-body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .no-scrollbar .ant-table-body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }

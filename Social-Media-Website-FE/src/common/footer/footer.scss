@@ -2,71 +2,99 @@
 
 .main-footer {
   background-color: $white-color;
-  padding: 5px 20px;
-  margin-top: 20px;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
-  justify-self: end;
+  padding: 15px 30px;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
 
   .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 20px;
+    max-width: 1120px;
+    margin: 0 auto;
 
     .footer-logo {
-      width: 50px;
-      height: auto;
+      width: 45px;
       img {
         width: 100%;
         height: auto;
         object-fit: contain;
       }
     }
-  }
 
-  .footer-socials {
-    display: flex;
-    width: 140px;
-    height: 38px;
-    a {
-      margin-left: 20px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-      &:hover {
-        color: $primary-color;
-      }
+    .center-content {
+      display: flex;
+      align-items: center;
+      gap: 25px;
     }
-  }
 
-  .footer-copyright {
-    font-size: $font-size-sm;
-    color: $light-text-color;
-    margin-right: 20px;
-    padding-left: 20px;
-  }
-  .center-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
-
-    img {
-      width: 30px;
-      height: 30px;
-      margin-right: 10px;
-      object-fit: contain;
-    }
-  }
-  .footer-links {
-    display: flex;
-    p {
-      color: $light-text-color;
+    .footer-copyright {
       font-size: $font-size-sm;
-      text-decoration: none;
-      margin-right: 26px;
+      color: $light-text-color;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 15px;
+      a {
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+        &:hover {
+          opacity: 1;
+        }
+        img {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      p {
+        color: $light-text-color;
+        font-size: $font-size-sm;
+        cursor: pointer;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  // --- Responsive ---
+  @include tablet {
+    padding: 15px 20px;
+    .footer-content {
+      .center-content {
+        gap: 15px;
+      }
+      .footer-links {
+        gap: 15px;
+      }
+    }
+  }
+
+  @include small-tablet {
+    .footer-content {
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px 0;
+    }
+  }
+
+  @include mobile {
+    padding: 15px;
+    .footer-content {
+      flex-direction: column;
+      gap: 12px;
+
+      .footer-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+      }
     }
   }
 }

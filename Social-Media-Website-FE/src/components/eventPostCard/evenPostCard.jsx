@@ -1,33 +1,59 @@
-import React, { useState } from 'react'
-import {
-  HandThumbsUpFill,
-  HandThumbsUp,
-  Chat,
-  BookmarkFill,
-  Bookmark,
-  Handbag,
-} from 'react-bootstrap-icons'
+import React, { useEffect, useState } from 'react'
+import { HandThumbsUpFill, HandThumbsUp, Chat } from 'react-bootstrap-icons'
 import toast from 'react-hot-toast'
-// import { likePostApi, applyToPostApi, bookmarkPostApi } from '../../apis/posts.api'
 import './eventPostCard.scss'
+import { likePostApi, dellikePostApi } from '../../apis/posts.api'
 
-const EventPostCard = ({ post }) => {
-  const [isLiked, setIsLiked] = useState(post.reacted || false)
-  const [likeCount, setLikeCount] = useState(post.countReaction || 0)
+const EventPostCard = ({ post, onViewDetail, onLikeToggled }) => {
+  const [isLiked, setIsLiked] = useState(post?.checkReaction || false)
+  const [likeCount, setLikeCount] = useState(post?.countReaction || 0)
 
   const handleLike = async () => {
     const originalLikedState = isLiked
-    const originalLikeCount = likeCount
-    setIsLiked(!isLiked)
-    setLikeCount(isLiked ? likeCount - 1 : likeCount + 1)
+    const newLikedState = !originalLikedState
+    const targetId = post.postId || post.eventId
+
+    setIsLiked(newLikedState)
+    setLikeCount((prev) => (newLikedState ? prev + 1 : prev - 1))
+
     try {
-      await likePostApi(post.id)
+      if (originalLikedState) {
+        await dellikePostApi({
+          targetId: post.eventId,
+          targetType: 'EVENT',
+        })
+
+        setIsLiked(false)
+        setLikeCount(likeCount - 1)
+      } else {
+        const response = await likePostApi({
+          targetId: post.eventId,
+          targetType: 'EVENT',
+          emotionType: 'LIKE',
+        })
+
+        if (onLikeToggled) {
+          const newLikeCount = newLikedState ? likeCount + 1 : likeCount - 1
+          onLikeToggled(targetId, newLikedState, newLikeCount)
+        }
+      }
     } catch (error) {
+      toast.error('Đã có lỗi xảy ra khi thực hiện thao tác.')
       setIsLiked(originalLikedState)
       setLikeCount(originalLikeCount)
-      toast.error('Đã có lỗi xảy ra.')
     }
   }
+  useEffect(() => {
+    setIsLiked(post.checkReaction)
+    setLikeCount(post.countReaction)
+  }, [post.checkReaction, post.countReaction])
+
+  const handleOpenDetail = () => {
+    if (onViewDetail) {
+      onViewDetail(post)
+    }
+  }
+
   return (
     <div className='post-card'>
       <div className='post-header'>
@@ -40,7 +66,7 @@ const EventPostCard = ({ post }) => {
           <span className='post-user-name'>{post.creator.fullName}</span>
           <span className='post-user-details'>{new Date(post.createdAt).toLocaleDateString()}</span>
         </div>
-        {post.targetType === 'EVENT' && <span className='recruit-tag'>Event</span>}
+        <span className='recruit-tag'>Event</span>
       </div>
       <p className='post-title'> {post.title}</p>
       <p className='post-content'> {post.description}</p>
@@ -54,13 +80,10 @@ const EventPostCard = ({ post }) => {
           <button onClick={handleLike} className={`action-button ${isLiked ? 'active' : ''}`}>
             {isLiked ? <HandThumbsUpFill /> : <HandThumbsUp />} <span>{likeCount}</span>
           </button>
-          <button className='action-button'>
+          <button onClick={handleOpenDetail} className='action-button'>
             <Chat /> <span>{post.countComment}</span>
           </button>
         </div>
-        <button className={`action-button `}>
-          <Bookmark />
-        </button>
       </div>
     </div>
   )

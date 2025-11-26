@@ -1,7 +1,6 @@
 import LoginPage from './pages/LoginPage/LoginPage'
 import ForgotPasswordPage from './pages/ForgotPasswordPage/ForgotPasswordPage'
 import MainLayout from './layouts/MainLayout/MainLayout'
-import UserHomePage from './pages/UserHomePage/UserHomePage'
 import { useRoutes, Navigate, Routes, useLocation, useNavigate } from 'react-router-dom'
 import './App.scss'
 import Dashboard from './pages/Admin/dashboard/Dashboard'
@@ -11,11 +10,17 @@ import Events from './pages/Admin/events/Events'
 import EventForm from './components/admin/event/EventForm'
 import LayoutAdmin from './layouts/LayoutAdmin/LayoutAdmin'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
+import Post from './pages/Admin/post/Post'
+import DetailPost from './pages/Admin/post/DetailPost'
 import toast, { Toaster } from 'react-hot-toast'
 import useAuth from './hooks/useAuth'
 import { useEffect } from 'react'
+import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton'
 import EventPage from './pages/EventPage/eventPage'
+import UserHomePage from './pages/userHomePage/userHomePage'
+import MyPosts from './components/myPosts/myPosts'
 import JobPage from './pages/JobPage/jobPage'
+
 function App() {
   const currentUser = useAuth()
   const role = currentUser.user?.role || []
@@ -23,7 +28,6 @@ function App() {
   const location = useLocation()
   const path = location.pathname
   const naviagate = useNavigate()
-  console.log('role: ', role)
   useEffect(() => {
     if (!isAdmin && path.startsWith('/admin')) {
       naviagate('/')
@@ -37,8 +41,12 @@ function App() {
       children: [
         {
           path: '',
-          element: <Dashboard />,
+          element: <Members />,
         },
+        // {
+        //   path: 'dashboard',
+        //   element: <Dashboard />,
+        // },
         {
           path: 'members',
           element: <Members />,
@@ -62,6 +70,14 @@ function App() {
         {
           path: 'events/edit/:id',
           element: <EventForm modal='edit' />,
+        },
+        {
+          path: 'posts',
+          element: <Post />,
+        },
+        {
+          path: 'post/detail/:id',
+          element: <DetailPost />,
         },
       ],
     },
@@ -94,6 +110,10 @@ function App() {
           path: 'profile',
           element: <ProfilePage />,
         },
+        {
+          path: 'my-posts',
+          element: <MyPosts />,
+        },
       ],
     },
   ])
@@ -101,6 +121,7 @@ function App() {
     <>
       <Toaster position='top-right' reverseOrder={false} />
       {elements}
+      <ScrollToTopButton />
     </>
   )
 }

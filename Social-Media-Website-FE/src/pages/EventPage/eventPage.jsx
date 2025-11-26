@@ -2,12 +2,12 @@ import React, { useState, useEffect, useCallback, use } from 'react'
 import { Pagination } from 'antd'
 import toast from 'react-hot-toast'
 import CreatePost from '../../components/createPost/createPost'
-import PostCard from '../../components/postCard/postCard'
-import SidebarWidget from '../../components/sidebarWidget/SidebarWidget'
 import { getEventApi, getPostsApi } from '../../apis/posts.api'
+
 import './EventPage.scss'
-import { current } from '@reduxjs/toolkit'
 import EventPostCard from '../../components/eventPostCard/evenPostCard'
+import EventDetails from '../../components/eventDetails/evenDetails'
+import CircularProgress from '@mui/joy/CircularProgress'
 
 const EventPage = () => {
   const [pagination, setPagination] = useState({
@@ -17,6 +17,8 @@ const EventPage = () => {
   const [posts, setPosts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [totalPosts, setTotalPosts] = useState(0)
+  const [selectedPost, setSelectedPost] = useState(null)
+  const [isPaging, setIsPaging] = useState(false)
 
   const fetchPosts = async () => {
     try {
@@ -27,12 +29,13 @@ const EventPage = () => {
       setPosts(response?.data?.content)
       setTotalPosts(response?.data?.totalElements || 0)
       setIsLoading(false)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      setIsPaging(false)
     } catch (error) {
       toast.error('Không thể tải bài đăng. Vui lòng thử lại sau.')
       setIsLoading(false)
     } finally {
       setIsLoading(false)
+      setIsPaging(false)
     }
   }
   useEffect(() => {
@@ -47,40 +50,98 @@ const EventPage = () => {
   }
 
   const handlePageChange = (pageCurrent, pageSize) => {
+    setIsPaging(true)
+
     setPagination((prev) => ({
       ...prev,
       current: pageCurrent - 1,
       size: pageSize || prev.size,
     }))
   }
+  const handleViewPostDetail = (postToView) => {
+    setSelectedPost(postToView)
+  }
+  const handleCommentAdded = (targetPostId) => {
+    setPosts((currentPosts) =>
+      currentPosts.map((p) => {
+        if (p.postId === targetPostId || p.eventId === targetPostId) {
+          return { ...p, countComment: (p.countComment || 0) + 1 }
+        }
+        return p
+      }),
+    )
+  }
+  const handleLikeToggled = (targetPostId, newLikeState, newLikeCount) => {
+    setPosts((currentPosts) =>
+      currentPosts.map((p) => {
+        if (p.postId === targetPostId || p.eventId === targetPostId) {
+          return { ...p, checkReaction: newLikeState, countReaction: newLikeCount }
+        }
+        return p
+      }),
+    )
+  }
+  const handleCommentDeleted = (targetPostId) => {
+    setPosts((currentPosts) =>
+      currentPosts.map((p) => {
+        if (p.postId === targetPostId || p.eventId === targetPostId) {
+          return { ...p, countComment: Math.max(0, p.countComment - 1) }
+        }
+        return p
+      }),
+    )
+  }
 
-  if (isLoading) {
-    return <div>Đang tải bài viết...</div>
+  const handleCloseModal = () => {
+    setSelectedPost(null)
   }
 
   return (
-    <div className='user-homepage-container'>
+    <div className='user-homepage-container '>
       <div className='main-content'>
-        <CreatePost posts={posts} onPostCreated={handlePostCreated} />
+        {!isLoading && <CreatePost posts={posts} onPostCreated={handlePostCreated} />}
+
         {isLoading ? (
-          <div className='loading-indicator'>Đang tải bài viết...</div>
+          <div className='loading-container'>
+            <CircularProgress color='primary' />
+          </div>
         ) : posts && posts.length > 0 ? (
-          posts.map((post, index) => <EventPostCard key={post.id || index} post={post} />)
+          posts.map((post, index) => (
+            <EventPostCard
+              key={post.id || index}
+              post={post}
+              onViewDetail={handleViewPostDetail}
+              onLikeToggled={handleLikeToggled}
+            />
+          ))
         ) : (
           <div className='no-posts-message'>Chưa có bài đăng nào để hiển thị.</div>
         )}
         <div className='pagination-wrapper'>
           {totalPosts > 0 && !isLoading && (
-            <Pagination
-              current={pagination.current + 1}
-              total={totalPosts}
-              pageSize={pagination.size}
-              showSizeChanger
-              onChange={handlePageChange}
-              onShowSizeChange={handlePageChange}
-            />
+            <>
+              <Pagination
+                current={pagination.current + 1}
+                total={totalPosts}
+                pageSize={pagination.size}
+                showSizeChanger
+                onChange={handlePageChange}
+                onShowSizeChange={handlePageChange}
+              />
+              {isPaging && <CircularProgress size='sm' color='primary' />}
+            </>
           )}
         </div>
+        {selectedPost && (
+          <EventDetails
+            key={selectedPost.postId || selectedPost.eventId}
+            post={selectedPost}
+            onClose={handleCloseModal}
+            onCommentAdded={handleCommentAdded}
+            onLikeToggled={handleLikeToggled}
+            onCommentDeleted={handleCommentDeleted}
+          />
+        )}
       </div>
     </div>
   )

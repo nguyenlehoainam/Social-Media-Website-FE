@@ -1,0 +1,99 @@
+$primary-orange: #f06d25;
+
+.import-cv-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.import-cv-modal-content {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: $primary-orange;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+  }
+
+  .file-input-area {
+    margin: 24px 0;
+    .file-input-label {
+      display: block;
+      padding: 12px;
+      border: 2px dashed #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #888;
+      transition: all 0.2s ease;
+      &:hover {
+        border-color: $primary-orange;
+        color: $primary-orange;
+      }
+    }
+    input[type='file'] {
+      display: none;
+    }
+  }
+
+  .template-link {
+    display: block;
+    color: #555;
+    text-decoration: underline;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    &:hover {
+      color: $primary-orange;
+    }
+  }
+
+  .import-button {
+    background-color: $primary-orange;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: $primary-orange;
+    }
+    &:disabled {
+      background-color: #ccc;
+    }
+  }
+}

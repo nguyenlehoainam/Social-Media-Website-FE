@@ -1,6 +1,9 @@
-.admin{
-    &-dashboard{
-        background-color:gray;
-        color:white;
+@use '../../../styles//index' as style;
+.admin {
+    &-dashboard {
+        color: style.$secondary-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
     }
 }

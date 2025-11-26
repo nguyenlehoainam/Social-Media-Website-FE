@@ -1,30 +1,54 @@
-import React, { useState } from 'react'
-import {
-  HandThumbsUpFill,
-  HandThumbsUp,
-  Chat,
-  BookmarkFill,
-  Bookmark,
-  Handbag,
-} from 'react-bootstrap-icons'
+import React, { useEffect, useState } from 'react'
+import { HandThumbsUpFill, HandThumbsUp, Chat, Handbag } from 'react-bootstrap-icons'
 import toast from 'react-hot-toast'
-// import { likePostApi, applyToPostApi, bookmarkPostApi } from '../../apis/posts.api'
-import './PostCard.scss'
-import { likePostApi, dellikePostApi } from '../../apis/posts.api'
+import './postCard.scss'
+import { likePostApi, dellikePostApi, createCommentApi } from '../../apis/posts.api'
+import ImportCvModal from '../importcv/importcv'
+import { info } from '../../apis/userProfile.api'
+import { useSelector } from 'react-redux'
 
-const PostCard = ({ post, onPostUpdate }) => {
-  const [isBookmarked, setIsBookmarked] = useState(post.bookmarked || false)
+const PostCard = ({ post, onViewDetail, onLikeToggled }) => {
+  const authState = useSelector((state) => state.auth.auth)
+  const currentUser = authState
   const [isLoadingApply, setIsLoadingApply] = useState(false)
+  const [isLiked, setIsLiked] = useState(post?.checkReaction || false)
+  const [likeCount, setLikeCount] = useState(post?.countReaction || 0)
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false)
+  const [infoUser, setInfoUser] = useState()
+  const fetchUser = async () => {
+    try {
+      const response = await info()
+      const userData = response?.data?.fullName
+      setInfoUser(userData)
+    } catch (err) {
+      toast.error('Lỗi khi tải thông tin người dùng')
+    }
+  }
 
-  const [isLiked, setIsLiked] = useState(post.reacted || false)
-  const [likeCount, setLikeCount] = useState(post.countReaction || 0)
+  useEffect(() => {
+    if (currentUser) {
+      fetchUser()
+    }
+  }, [currentUser])
+
+  useEffect(() => {
+    setIsLiked(post.checkReaction)
+    setLikeCount(post.countReaction)
+  }, [post.checkReaction, post.countReaction])
+
+  const handleOpenDetail = () => {
+    if (onViewDetail) {
+      onViewDetail(post)
+    }
+  }
 
   const handleLike = async () => {
     const originalLikedState = isLiked
-    const originalLikeCount = likeCount
-    setIsLiked(!isLiked)
-    setLikeCount(isLiked ? likeCount - 1 : likeCount + 1)
+    const newLikedState = !originalLikedState
+    const targetId = post.postId || post.eventId
 
+    setIsLiked(newLikedState)
+    setLikeCount((prev) => (newLikedState ? prev + 1 : prev - 1))
     try {
       if (originalLikedState) {
         await dellikePostApi({
@@ -32,43 +56,37 @@ const PostCard = ({ post, onPostUpdate }) => {
           targetType: post.targetType,
         })
       } else {
-        await likePostApi({
+        const response = await likePostApi({
           targetId: post.postId,
           targetType: post.targetType,
           emotionType: 'LIKE',
         })
       }
-      if (response.data.data && onPostUpdate) {
-        onPostUpdate(response.data.data)
+      if (onLikeToggled) {
+        const newLikeCount = newLikedState ? likeCount + 1 : likeCount - 1
+        onLikeToggled(targetId, newLikedState, newLikeCount)
       }
     } catch (error) {
-      toast.error('Đã có lỗi xảy ra.')
+      toast.error('Đã có lỗi xảy ra khi thực hiện thao tác.')
       setIsLiked(originalLikedState)
       setLikeCount(originalLikeCount)
     }
   }
 
-  const handleApply = async () => {
-    setIsLoadingApply(true)
-    try {
-      await applyToPostApi(post.id)
-      toast.success('Ứng tuyển thành công!')
-    } catch (error) {
-      toast.error(error.response?.data?.message || 'Ứng tuyển không thành công.')
-    } finally {
-      setIsLoadingApply(false)
-    }
+  const handleApply = () => {
+    setIsCvModalOpen(true)
   }
+
   return (
     <div className='post-card'>
       <div className='post-header'>
         <img
-          src={post.creator.avatarUrl}
-          alt={`${post.creator.fullName}'s avatar`}
+          src={post?.creator?.avatarUrl}
+          alt={`${post?.creator?.fullName}'s avatar`}
           className='post-avatar'
         />
         <div className='post-user-info'>
-          <span className='post-user-name'>{post.creator.fullName}</span>
+          <span className='post-user-name'>{post?.creator?.fullName}</span>
           <span className='post-user-create'>{new Date(post.createdAt).toLocaleDateString()}</span>
         </div>
         {post.targetType === 'JOB' && <span className='recruit-tag'>Recruitment</span>}
@@ -86,10 +104,10 @@ const PostCard = ({ post, onPostUpdate }) => {
           <button onClick={handleLike} className={`action-button ${isLiked ? 'active' : ''}`}>
             {isLiked ? <HandThumbsUpFill /> : <HandThumbsUp />} <span>{likeCount}</span>
           </button>
-          <button className='action-button'>
+          <button onClick={handleOpenDetail} className='action-button'>
             <Chat /> <span>{post.countComment}</span>
           </button>
-          {post.targetType === 'JOB' && (
+          {post.targetType === 'JOB' && post?.creator?.fullName !== infoUser && (
             <button
               onClick={handleApply}
               className='action-button apply-button'
@@ -98,10 +116,10 @@ const PostCard = ({ post, onPostUpdate }) => {
             </button>
           )}
         </div>
-        <button className={`action-button ${isBookmarked ? 'active' : ''}`}>
-          {isBookmarked ? <BookmarkFill /> : <Bookmark />}
-        </button>
       </div>
+      {isCvModalOpen && (
+        <ImportCvModal postId={post.postId} onClose={() => setIsCvModalOpen(false)} />
+      )}
     </div>
   )
 }

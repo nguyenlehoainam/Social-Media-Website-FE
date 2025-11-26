@@ -38,7 +38,7 @@ function EventForm({ modal }) {
       setEvent(filledEvent)
       form.setFieldsValue(filledEvent)
     } catch (error) {
-      console.error(error)
+      toast.error(error)
     }
   }
   useEffect(() => {
@@ -48,35 +48,46 @@ function EventForm({ modal }) {
   }, [id, form])
 
   // Tao  va sua su kien voi api
-  const handleSubmit = async (values) => {
+ const handleSubmit = async (values) => {
+  if (modal === 'add') {
+    // Tạo formData để upload file + info
     const formData = new FormData()
     formData.append('title', values.title)
     formData.append('description', values.description || '')
     formData.append('eventDate', values.eventDate.format('YYYY-MM-DD[T]HH:mm:ss'))
     formData.append('organizer', values.organizer)
     formData.append('location', values.location)
-
-    if (modal === 'add') {
-      const fileList = values?.image || []
-      fileList.forEach((fileWrapper) => {
-        formData.append('files', fileWrapper.originFileObj)
-      })
-    }
+    const fileList = values?.image || []
+    fileList.forEach((fileWrapper) => {
+      formData.append('files', fileWrapper.originFileObj)
+    })
 
     try {
-      if (modal === 'add') {
-        await createEvents(formData)
-        toast.success('Tạo sự kiện thành công!')
-      } else {
-        await updateEvents(id, formData)
-        toast.success('Cập nhật sự kiện thành công!')
-      }
-
+      await createEvents(formData)
+      toast.success('Tạo sự kiện thành công!')
       navigate('/admin/events')
     } catch (error) {
       toast.error('Tạo sự kiện thất bại!')
     }
+  } else {
+    // mode edit
+    const jsonPayload = {
+      title: values.title,
+      description: values.description || '',
+      eventDate: values.eventDate.format('YYYY-MM-DD[T]HH:mm:ss'),
+      organizer: values.organizer,
+      location: values.location
+    }
+    try {
+      await updateEvents(id, jsonPayload)
+      toast.success('Cập nhật sự kiện thành công!')
+      navigate('/admin/events')
+    } catch (error) {
+      toast.error('Cập nhật sự kiện thất bại!')
+    }
   }
+}
+
 
   return (
     <div className='event-form__wrapper'>

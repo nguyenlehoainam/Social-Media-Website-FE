@@ -13,7 +13,7 @@ function Members() {
   const [id, setId] = useState()
   const [username, setUsername] = useState()
   const [searchValue, setSearchValue] = useState('')
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState('')
 
   const [deletePopup, setDeletePopup] = useState({
     open: false,
@@ -60,10 +60,9 @@ function Members() {
         page: pagination.current,
         size: pagination.size,
       })
-      console.log('Get AllMember', response)
       setData(response?.data)
     } catch (error) {
-      console.error(error)
+      toast.error(error)
     } finally {
       setLoading(false)
     }
@@ -72,15 +71,15 @@ function Members() {
     fetchUsers()
   }, [pagination])
 
-  const handleRestore = async(email) => {
-    try{
+  const handleRestore = async (email) => {
+    try {
       await restoreMembers(email)
       fetchUsers()
-      toast.success("Khôi phục tài khoản thành công!")
-    }catch(error){
-      toast.error("Khôi phục tài khoản thất bại!")
+      toast.success('Khôi phục tài khoản thành công!')
+    } catch (error) {
+      toast.error('Khôi phục tài khoản thất bại!')
     }
-  } 
+  }
 
   const columns = [
     {
@@ -170,7 +169,10 @@ function Members() {
     data?.items?.filter((item) => {
       const value = searchValue.toLowerCase()
       return (
-        item.fullName?.toLowerCase().split(" ").some(word => word === value )||
+        item.fullName
+          ?.toLowerCase()
+          .split(' ')
+          .some((word) => word === value) ||
         item.username?.toLowerCase().includes(value) ||
         item.email?.toLowerCase().includes(value)
       )
@@ -189,12 +191,17 @@ function Members() {
             />
           </div>
           <div className='members-toolbar__actions'>
-            <button className='button button--search' onClick={() => handleSearch()}>Tìm kiếm</button>
-            <div style={{marginLeft: '400px'}}>
+            <button className='button button--search' onClick={() => handleSearch()}>
+              Tìm kiếm
+            </button>
+            <div style={{ marginLeft: '400px' }}>
               <button className='button button--add' onClick={handleAdd}>
                 Thêm
               </button>
-              <button className='button button--import' onClick={handleImport} style={{marginLeft: "10px"}}>
+              <button
+                className='button button--import'
+                onClick={handleImport}
+                style={{ marginLeft: '10px' }}>
                 Import
               </button>
             </div>
@@ -216,8 +223,7 @@ function Members() {
           <Pagination
             current={pagination.current + 1}
             pageSize={pagination.size}
-            total={searchValue ? filteredData.length :data?.totalItems}
-            
+            total={searchValue ? filteredData.length : data?.totalItems}
             showSizeChanger
             onChange={handlePageChange}
             onShowSizeChange={handlePageChange}

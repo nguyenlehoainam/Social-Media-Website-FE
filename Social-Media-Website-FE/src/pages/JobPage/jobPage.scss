@@ -43,3 +43,10 @@
     color: #888;
   }
 }
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60vh;
+}
