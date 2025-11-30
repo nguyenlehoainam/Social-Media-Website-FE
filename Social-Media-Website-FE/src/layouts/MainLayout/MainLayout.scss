@@ -10,13 +10,13 @@
 .main-layout-container {
   display: flex;
   gap: 24px;
-  max-width: 1120px;
+  max-width: 900px;
   width: 100%;
   margin: 24px auto;
   padding: 0 16px;
   box-sizing: border-box;
   align-items: flex-start;
-  flex-grow: 1;
+  flex-grow: 0;
 
   &.no-sidebar {
     justify-content: center;
@@ -46,31 +46,31 @@
 }
 
 .layout-content {
-  flex: 2;
+  flex: 1;
   min-width: 0;
 }
 
-.layout-sidebar {
-  flex: 1;
-  position: sticky;
-  top: 104px;
-  align-self: flex-start;
-  max-height: calc(100vh - 120px);
-  max-width: 350px;
+// .layout-sidebar {
+//   flex: 1;
+//   position: sticky;
+//   top: 104px;
+//   align-self: flex-start;
+//   max-height: calc(100vh - 120px);
+//   max-width: 350px;
 
-  @include small-tablet {
-    position: static;
-    top: unset;
-    width: 100%;
-    max-width: 100%;
-    margin-top: 16px;
-  }
+//   @include small-tablet {
+//     position: static;
+//     top: unset;
+//     width: 100%;
+//     max-width: 100%;
+//     margin-top: 16px;
+//   }
 
-  @include mobile {
-    position: static;
-    top: unset;
-    width: 100%;
-    max-width: 100%;
-    margin-top: 12px;
-  }
-}
+//   @include mobile {
+//     position: static;
+//     top: unset;
+//     width: 100%;
+//     max-width: 100%;
+//     margin-top: 12px;
+//   }
+// }

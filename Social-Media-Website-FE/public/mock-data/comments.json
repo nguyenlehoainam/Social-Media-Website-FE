@@ -1,0 +1,662 @@
+[
+  {
+    "id": "c1",
+    "postId": "p1",
+    "content": "Hóng quá anh ơi, mấy giờ bắt đầu ạ?",
+    "author": {
+      "id": "u3",
+      "fullName": "Lê Văn C",
+      "avatar": "https://ui-avatars.com/api/?name=Le+Van+C&background=random"
+    },
+    "createdAt": "2025-11-28T08:05:00Z"
+  },
+  {
+    "id": "c2",
+    "postId": "p1",
+    "content": "Có cần mang máy tính cài sẵn gì không ạ?",
+    "author": {
+      "id": "u2",
+      "fullName": "Trần Thị B",
+      "avatar": "https://ui-avatars.com/api/?name=Tran+Thi+B&background=random"
+    },
+    "createdAt": "2025-11-28T08:10:00Z"
+  },
+  {
+    "id": "c3",
+    "postId": "p1",
+    "content": "Phòng 801 ở tòa nhà nào thế ạ?",
+    "author": {
+      "id": "u4",
+      "fullName": "Phạm Văn D",
+      "avatar": "https://ui-avatars.com/api/?name=Pham+Van+D&background=random"
+    },
+    "createdAt": "2025-11-28T08:15:00Z"
+  },
+  {
+    "id": "c4",
+    "postId": "p2",
+    "content": "Em chưa có kinh nghiệm làm dự án thực tế thì có ứng tuyển được không ạ?",
+    "author": {
+      "id": "u5",
+      "fullName": "Nguyễn Văn E",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+E&background=random"
+    },
+    "createdAt": "2025-11-27T11:00:00Z"
+  },
+  {
+    "id": "c5",
+    "postId": "p2",
+    "content": "Ib em xin JD chi tiết với ạ.",
+    "author": {
+      "id": "u3",
+      "fullName": "Lê Văn C",
+      "avatar": "https://ui-avatars.com/api/?name=Le+Van+C&background=random"
+    },
+    "createdAt": "2025-11-27T11:30:00Z"
+  },
+  {
+    "id": "c6",
+    "postId": "p3",
+    "content": "Workshop xịn quá, hóng phần thực hành.",
+    "author": {
+      "id": "u6",
+      "fullName": "Đỗ Thị F",
+      "avatar": "https://ui-avatars.com/api/?name=Do+Thi+F&background=random"
+    },
+    "createdAt": "2025-11-29T09:30:00Z"
+  },
+  {
+    "id": "c7",
+    "postId": "p3",
+    "content": "Có record lại không ạ? Hôm đó em bận học mất rồi.",
+    "author": {
+      "id": "u1",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+    },
+    "createdAt": "2025-11-29T10:00:00Z"
+  },
+  {
+    "id": "c8",
+    "postId": "p5",
+    "content": "HIT vô địch ⚽️",
+    "author": {
+      "id": "u4",
+      "fullName": "Phạm Văn D",
+      "avatar": "https://ui-avatars.com/api/?name=Pham+Van+D&background=random"
+    },
+    "createdAt": "2025-11-30T09:00:00Z"
+  },
+  {
+    "id": "c9",
+    "postId": "p5",
+    "content": "Kèo này căng, anh em nhớ mang nước đi tiếp sức nhé.",
+    "author": {
+      "id": "u3",
+      "fullName": "Lê Văn C",
+      "avatar": "https://ui-avatars.com/api/?name=Le+Van+C&background=random"
+    },
+    "createdAt": "2025-11-30T09:15:00Z"
+  },
+  {
+    "id": "c10",
+    "postId": "p6",
+    "content": "Em gửi CV qua mail rồi ạ, mong nhận được phản hồi sớm.",
+    "author": {
+      "id": "u7",
+      "fullName": "Hoàng Văn G",
+      "avatar": "https://ui-avatars.com/api/?name=Hoang+Van+G&background=random"
+    },
+    "createdAt": "2025-12-01T10:30:00Z"
+  },
+  {
+    "id": "c11",
+    "postId": "p9",
+    "content": "Tìm đồng đội gánh tạ Code War đây ạ =))",
+    "author": {
+      "id": "u2",
+      "fullName": "Trần Thị B",
+      "avatar": "https://ui-avatars.com/api/?name=Tran+Thi+B&background=random"
+    },
+    "createdAt": "2025-12-05T08:30:00Z"
+  },
+  {
+    "id": "c12",
+    "postId": "p9",
+    "content": "Giải thưởng hấp dẫn quá!",
+    "author": {
+      "id": "u8",
+      "fullName": "Bùi Thị H",
+      "avatar": "https://ui-avatars.com/api/?name=Bui+Thi+H&background=random"
+    },
+    "createdAt": "2025-12-05T09:00:00Z"
+  },
+  {
+    "id": "c13",
+    "postId": "p9",
+    "content": "Cho em một slot vào team với @Le Van C",
+    "author": {
+      "id": "u6",
+      "fullName": "Đỗ Thị F",
+      "avatar": "https://ui-avatars.com/api/?name=Do+Thi+F&background=random"
+    },
+    "createdAt": "2025-12-05T09:15:00Z"
+  },
+  {
+    "id": "c14",
+    "postId": "p11",
+    "content": "Dresscode màu đỏ à mọi người?",
+    "author": {
+      "id": "u5",
+      "fullName": "Nguyễn Văn E",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+E&background=random"
+    },
+    "createdAt": "2025-12-15T18:30:00Z"
+  },
+  {
+    "id": "c15",
+    "postId": "p11",
+    "content": "Hóng các tiết mục văn nghệ của K17 quá.",
+    "author": {
+      "id": "u1",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+    },
+    "createdAt": "2025-12-15T19:00:00Z"
+  },
+  {
+    "id": "c16",
+    "postId": "p12",
+    "content": "Part-time có yêu cầu làm việc tại văn phòng tối thiểu bao nhiêu buổi không ạ?",
+    "author": {
+      "id": "u9",
+      "fullName": "Vũ Văn I",
+      "avatar": "https://ui-avatars.com/api/?name=Vu+Van+I&background=random"
+    },
+    "createdAt": "2025-12-16T09:30:00Z"
+  },
+  {
+    "id": "c17",
+    "postId": "p4",
+    "content": "Em biết chụp ảnh nhưng chưa biết chỉnh màu thì có được training không ạ?",
+    "author": {
+      "id": "u10",
+      "fullName": "Lý Thị K",
+      "avatar": "https://ui-avatars.com/api/?name=Ly+Thi+K&background=random"
+    },
+    "createdAt": "2025-11-29T15:00:00Z"
+  },
+  {
+    "id": "c18",
+    "postId": "p7",
+    "content": "Topic này hay nè, đúng cái em đang tìm hiểu.",
+    "author": {
+      "id": "u2",
+      "fullName": "Trần Thị B",
+      "avatar": "https://ui-avatars.com/api/?name=Tran+Thi+B&background=random"
+    },
+    "createdAt": "2025-12-02T19:30:00Z"
+  },
+  {
+    "id": "c19",
+    "postId": "p10",
+    "content": "Em đăng ký support lớp C++ ạ.",
+    "author": {
+      "id": "u3",
+      "fullName": "Lê Văn C",
+      "avatar": "https://ui-avatars.com/api/?name=Le+Van+C&background=random"
+    },
+    "createdAt": "2025-12-06T12:00:00Z"
+  },
+  {
+    "id": "c20",
+    "postId": "p1",
+    "content": "Chấm hóng slide sau buổi training ạ.",
+    "author": {
+      "id": "u5",
+      "fullName": "Nguyễn Văn E",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+E&background=random"
+    },
+    "createdAt": "2025-11-28T09:00:00Z"
+  },
+  {
+    "id": "c21",
+    "postId": "p1",
+    "content": "Phòng 801 có điều hòa không anh ơi, nay nóng quá.",
+    "author": {
+      "id": "u11",
+      "fullName": "Đặng Văn L",
+      "avatar": "https://ui-avatars.com/api/?name=Dang+Van+L&background=random"
+    },
+    "createdAt": "2025-11-28T09:05:00Z"
+  },
+  {
+    "id": "c22",
+    "postId": "p1",
+    "content": "@Hoàng Văn G đi không ông ơi?",
+    "author": {
+      "id": "u12",
+      "fullName": "Trịnh Thị M",
+      "avatar": "https://ui-avatars.com/api/?name=Trinh+Thi+M&background=random"
+    },
+    "createdAt": "2025-11-28T09:10:00Z"
+  },
+  {
+    "id": "c23",
+    "postId": "p2",
+    "content": "Fresher chưa có kinh nghiệm thực tế có được apply không ạ?",
+    "author": {
+      "id": "u13",
+      "fullName": "Cao Văn N",
+      "avatar": "https://ui-avatars.com/api/?name=Cao+Van+N&background=random"
+    },
+    "createdAt": "2025-11-27T13:00:00Z"
+  },
+  {
+    "id": "c24",
+    "postId": "p2",
+    "content": "Check inbox em với ạ, em vừa gửi CV.",
+    "author": {
+      "id": "u14",
+      "fullName": "Mai Thị P",
+      "avatar": "https://ui-avatars.com/api/?name=Mai+Thi+P&background=random"
+    },
+    "createdAt": "2025-11-27T14:20:00Z"
+  },
+  {
+    "id": "c25",
+    "postId": "p3",
+    "content": "Em dân code backend đi nghe ké để biết cách chửi designer được không ạ? =))",
+    "author": {
+      "id": "u15",
+      "fullName": "Lưu Văn Q",
+      "avatar": "https://ui-avatars.com/api/?name=Luu+Van+Q&background=random"
+    },
+    "createdAt": "2025-11-29T10:15:00Z"
+  },
+  {
+    "id": "c26",
+    "postId": "p3",
+    "content": "Speaker xịn quá, idol của em!",
+    "author": {
+      "id": "u16",
+      "fullName": "Phan Thị R",
+      "avatar": "https://ui-avatars.com/api/?name=Phan+Thi+R&background=random"
+    },
+    "createdAt": "2025-11-29T10:30:00Z"
+  },
+  {
+    "id": "c27",
+    "postId": "p4",
+    "content": "Em biết edit CapCut giật giật có được ứng tuyển không ạ?",
+    "author": {
+      "id": "u17",
+      "fullName": "Dương Văn S",
+      "avatar": "https://ui-avatars.com/api/?name=Duong+Van+S&background=random"
+    },
+    "createdAt": "2025-11-29T16:00:00Z"
+  },
+  {
+    "id": "c28",
+    "postId": "p4",
+    "content": "Ban Truyền Thông toàn trai xinh gái đẹp thuiii",
+    "author": {
+      "id": "u18",
+      "fullName": "Hồ Thị T",
+      "avatar": "https://ui-avatars.com/api/?name=Ho+Thi+T&background=random"
+    },
+    "createdAt": "2025-11-29T16:45:00Z"
+  },
+  {
+    "id": "c29",
+    "postId": "p5",
+    "content": "Dự đoán HIT thắng 3-1 nhé anh em.",
+    "author": {
+      "id": "u19",
+      "fullName": "Võ Văn U",
+      "avatar": "https://ui-avatars.com/api/?name=Vo+Van+U&background=random"
+    },
+    "createdAt": "2025-11-30T09:30:00Z"
+  },
+  {
+    "id": "c30",
+    "postId": "p5",
+    "content": "Đội hình ra sân có ai thế ạ?",
+    "author": {
+      "id": "u20",
+      "fullName": "Đinh Thị V",
+      "avatar": "https://ui-avatars.com/api/?name=Dinh+Thi+V&background=random"
+    },
+    "createdAt": "2025-11-30T09:45:00Z"
+  },
+  {
+    "id": "c31",
+    "postId": "p6",
+    "content": "Lương này là Net hay Gross vậy ạ?",
+    "author": {
+      "id": "u21",
+      "fullName": "Lương Văn X",
+      "avatar": "https://ui-avatars.com/api/?name=Luong+Van+X&background=random"
+    },
+    "createdAt": "2025-12-01T11:00:00Z"
+  },
+  {
+    "id": "c32",
+    "postId": "p6",
+    "content": "Có yêu cầu tiếng Anh giao tiếp không ạ?",
+    "author": {
+      "id": "u22",
+      "fullName": "Tạ Thị Y",
+      "avatar": "https://ui-avatars.com/api/?name=Ta+Thi+Y&background=random"
+    },
+    "createdAt": "2025-12-01T11:30:00Z"
+  },
+  {
+    "id": "c33",
+    "postId": "p7",
+    "content": "Topic AI này có khó với người mới bắt đầu không ạ?",
+    "author": {
+      "id": "u23",
+      "fullName": "Khương Văn Z",
+      "avatar": "https://ui-avatars.com/api/?name=Khuong+Van+Z&background=random"
+    },
+    "createdAt": "2025-12-02T20:00:00Z"
+  },
+  {
+    "id": "c34",
+    "postId": "p7",
+    "content": "I'm in! See you guys there.",
+    "author": {
+      "id": "u24",
+      "fullName": "Quách Thị A1",
+      "avatar": "https://ui-avatars.com/api/?name=Quach+Thi+A1&background=random"
+    },
+    "createdAt": "2025-12-02T20:15:00Z"
+  },
+  {
+    "id": "c35",
+    "postId": "p8",
+    "content": "Em chỉ biết dùng Canva thì có được không ạ? :((",
+    "author": {
+      "id": "u25",
+      "fullName": "Thái Văn B1",
+      "avatar": "https://ui-avatars.com/api/?name=Thai+Van+B1&background=random"
+    },
+    "createdAt": "2025-12-03T10:00:00Z"
+  },
+  {
+    "id": "c36",
+    "postId": "p8",
+    "content": "Deadline gấp quá, em sợ không kịp làm bài test.",
+    "author": {
+      "id": "u26",
+      "fullName": "Nông Thị C1",
+      "avatar": "https://ui-avatars.com/api/?name=Nong+Thi+C1&background=random"
+    },
+    "createdAt": "2025-12-03T10:30:00Z"
+  },
+  {
+    "id": "c37",
+    "postId": "p9",
+    "content": "Cần tìm 1 bạn nữ vào team cho đủ đội hình ạ, team mình gánh được hết!",
+    "author": {
+      "id": "u27",
+      "fullName": "Hà Văn D1",
+      "avatar": "https://ui-avatars.com/api/?name=Ha+Van+D1&background=random"
+    },
+    "createdAt": "2025-12-05T09:30:00Z"
+  },
+  {
+    "id": "c38",
+    "postId": "p9",
+    "content": "Giải nhì là gì thế ạ?",
+    "author": {
+      "id": "u28",
+      "fullName": "Đàm Thị E1",
+      "avatar": "https://ui-avatars.com/api/?name=Dam+Thi+E1&background=random"
+    },
+    "createdAt": "2025-12-05T09:45:00Z"
+  },
+  {
+    "id": "c39",
+    "postId": "p9",
+    "content": "@Lê Văn C Lập team báo danh thôi bạn ơi.",
+    "author": {
+      "id": "u29",
+      "fullName": "Bạch Văn F1",
+      "avatar": "https://ui-avatars.com/api/?name=Bach+Van+F1&background=random"
+    },
+    "createdAt": "2025-12-05T10:00:00Z"
+  },
+  {
+    "id": "c40",
+    "postId": "p9",
+    "content": "Năm nay có thi online không BTC ơi?",
+    "author": {
+      "id": "u30",
+      "fullName": "Tiêu Thị G1",
+      "avatar": "https://ui-avatars.com/api/?name=Tieu+Thi+G1&background=random"
+    },
+    "createdAt": "2025-12-05T10:15:00Z"
+  },
+  {
+    "id": "c41",
+    "postId": "p10",
+    "content": "K14 già rồi có được đăng ký không ạ =))",
+    "author": {
+      "id": "u1",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+    },
+    "createdAt": "2025-12-06T13:00:00Z"
+  },
+  {
+    "id": "c42",
+    "postId": "p10",
+    "content": "Lịch dạy vào buổi tối hay cuối tuần thế ạ?",
+    "author": {
+      "id": "u31",
+      "fullName": "Dương Văn H1",
+      "avatar": "https://ui-avatars.com/api/?name=Duong+Van+H1&background=random"
+    },
+    "createdAt": "2025-12-06T13:30:00Z"
+  },
+  {
+    "id": "c43",
+    "postId": "p11",
+    "content": "Có được dẫn người yêu đi cùng không ạ?",
+    "author": {
+      "id": "u32",
+      "fullName": "Lại Thị K1",
+      "avatar": "https://ui-avatars.com/api/?name=Lai+Thi+K1&background=random"
+    },
+    "createdAt": "2025-12-15T19:30:00Z"
+  },
+  {
+    "id": "c44",
+    "postId": "p11",
+    "content": "Em không có đồ màu đỏ, mặc màu đen được không ạ?",
+    "author": {
+      "id": "u33",
+      "fullName": "Vương Văn L1",
+      "avatar": "https://ui-avatars.com/api/?name=Vuong+Van+L1&background=random"
+    },
+    "createdAt": "2025-12-15T19:45:00Z"
+  },
+  {
+    "id": "c45",
+    "postId": "p11",
+    "content": "Mấy giờ kết thúc vậy ạ, KTX đóng cửa sớm :((",
+    "author": {
+      "id": "u34",
+      "fullName": "Tống Thị M1",
+      "avatar": "https://ui-avatars.com/api/?name=Tong+Thi+M1&background=random"
+    },
+    "createdAt": "2025-12-15T20:00:00Z"
+  },
+  {
+    "id": "c46",
+    "postId": "p12",
+    "content": "Có được làm remote 100% không anh ơi?",
+    "author": {
+      "id": "u35",
+      "fullName": "Đào Văn N1",
+      "avatar": "https://ui-avatars.com/api/?name=Dao+Van+N1&background=random"
+    },
+    "createdAt": "2025-12-16T10:00:00Z"
+  },
+  {
+    "id": "c47",
+    "postId": "p12",
+    "content": "Em chưa biết Redux, vào có được đào tạo thêm không ạ?",
+    "author": {
+      "id": "u36",
+      "fullName": "Phùng Thị P1",
+      "avatar": "https://ui-avatars.com/api/?name=Phung+Thi+P1&background=random"
+    },
+    "createdAt": "2025-12-16T10:15:00Z"
+  },
+  {
+    "id": "c48",
+    "postId": "p1",
+    "content": "Nhớ quay video lại cho ae ở xa nhé admin.",
+    "author": {
+      "id": "u37",
+      "fullName": "Giang Văn Q1",
+      "avatar": "https://ui-avatars.com/api/?name=Giang+Van+Q1&background=random"
+    },
+    "createdAt": "2025-11-28T09:20:00Z"
+  },
+  {
+    "id": "c49",
+    "postId": "p2",
+    "content": "Tuyển thực tập sinh không ạ?",
+    "author": {
+      "id": "u38",
+      "fullName": "Chu Thị R1",
+      "avatar": "https://ui-avatars.com/api/?name=Chu+Thi+R1&background=random"
+    },
+    "createdAt": "2025-11-27T15:00:00Z"
+  },
+  {
+    "id": "c50",
+    "postId": "p3",
+    "content": "Bài hay quá, em xin slide được không ạ?",
+    "author": {
+      "id": "u39",
+      "fullName": "Thân Văn S1",
+      "avatar": "https://ui-avatars.com/api/?name=Than+Van+S1&background=random"
+    },
+    "createdAt": "2025-11-29T11:00:00Z"
+  },
+  {
+    "id": "c51",
+    "postId": "p4",
+    "content": "Hạn nộp hồ sơ đến bao giờ thế ạ?",
+    "author": {
+      "id": "u40",
+      "fullName": "Nghiêm Thị T1",
+      "avatar": "https://ui-avatars.com/api/?name=Nghiem+Thi+T1&background=random"
+    },
+    "createdAt": "2025-11-29T17:00:00Z"
+  },
+  {
+    "id": "c52",
+    "postId": "p5",
+    "content": "Trận này đá sân nào thế mọi người?",
+    "author": {
+      "id": "u41",
+      "fullName": "La Văn U1",
+      "avatar": "https://ui-avatars.com/api/?name=La+Van+U1&background=random"
+    },
+    "createdAt": "2025-11-30T10:00:00Z"
+  },
+  {
+    "id": "c53",
+    "postId": "p6",
+    "content": "Cho em xin địa chỉ công ty với ạ.",
+    "author": {
+      "id": "u42",
+      "fullName": "Mạc Thị V1",
+      "avatar": "https://ui-avatars.com/api/?name=Mac+Thi+V1&background=random"
+    },
+    "createdAt": "2025-12-01T13:00:00Z"
+  },
+  {
+    "id": "c54",
+    "postId": "p7",
+    "content": "Em không giỏi tiếng Anh lắm tham gia có được không?",
+    "author": {
+      "id": "u43",
+      "fullName": "Liễu Văn X1",
+      "avatar": "https://ui-avatars.com/api/?name=Lieu+Van+X1&background=random"
+    },
+    "createdAt": "2025-12-02T21:00:00Z"
+  },
+  {
+    "id": "c55",
+    "postId": "p8",
+    "content": "Có lương cứng không ạ hay tính theo sản phẩm?",
+    "author": {
+      "id": "u44",
+      "fullName": "Đoàn Thị Y1",
+      "avatar": "https://ui-avatars.com/api/?name=Doan+Thi+Y1&background=random"
+    },
+    "createdAt": "2025-12-03T11:00:00Z"
+  },
+  {
+    "id": "c56",
+    "postId": "p9",
+    "content": "Ai chưa có team pm mình nhé, mình cân team!",
+    "author": {
+      "id": "u45",
+      "fullName": "Hứa Văn Z1",
+      "avatar": "https://ui-avatars.com/api/?name=Hua+Van+Z1&background=random"
+    },
+    "createdAt": "2025-12-05T11:00:00Z"
+  },
+  {
+    "id": "c57",
+    "postId": "p10",
+    "content": "Em K16 đăng ký làm trợ giảng được không ạ?",
+    "author": {
+      "id": "u46",
+      "fullName": "Giáp Thị A2",
+      "avatar": "https://ui-avatars.com/api/?name=Giap+Thi+A2&background=random"
+    },
+    "createdAt": "2025-12-06T14:00:00Z"
+  },
+  {
+    "id": "c58",
+    "postId": "p11",
+    "content": "Năm nay có tiết mục kịch không ạ? Hóng quá.",
+    "author": {
+      "id": "u47",
+      "fullName": "Khuất Văn B2",
+      "avatar": "https://ui-avatars.com/api/?name=Khuat+Van+B2&background=random"
+    },
+    "createdAt": "2025-12-15T21:00:00Z"
+  },
+  {
+    "id": "c59",
+    "postId": "p12",
+    "content": "Ib em trao đổi thêm với ạ.",
+    "author": {
+      "id": "u48",
+      "fullName": "Lê Thị C2",
+      "avatar": "https://ui-avatars.com/api/?name=Le+Thi+C2&background=random"
+    },
+    "createdAt": "2025-12-16T11:00:00Z"
+  },
+  {
+    "id": "c60",
+    "postId": "p12",
+    "content": "Có yêu cầu bằng cấp đại học không ạ?",
+    "author": {
+      "id": "u49",
+      "fullName": "Ngô Văn D2",
+      "avatar": "https://ui-avatars.com/api/?name=Ngo+Van+D2&background=random"
+    },
+    "createdAt": "2025-12-16T11:30:00Z"
+  }
+]

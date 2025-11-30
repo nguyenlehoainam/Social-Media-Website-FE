@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "u1",
+      "username": "nguyenvana",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random",
+      "role": "LEADER",
+      "generation": 14,
+      "status": "ACTIVE",
+      "majors": "Software Engineering"
+    },
+    {
+      "id": "u2",
+      "username": "tranthib",
+      "fullName": "Trần Thị B",
+      "avatar": "https://ui-avatars.com/api/?name=Tran+Thi+B&background=random",
+      "role": "MEMBER",
+      "generation": 15,
+      "status": "ACTIVE",
+      "majors": "Information System"
+    },
+    {
+      "id": "u3",
+      "username": "leci",
+      "fullName": "Lê Văn C",
+      "avatar": "https://ui-avatars.com/api/?name=Le+Van+C&background=random",
+      "role": "MEMBER",
+      "generation": 16,
+      "status": "INACTIVE",
+      "majors": "Computer Science"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "totalRows": 50,
+    "totalPages": 5
+  }
+}

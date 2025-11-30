@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "id": "e1",
+      "title": "Big Offline 2025 - Team Building",
+      "description": "Chuyến đi gắn kết các thành viên tại Ba Vì.",
+      "timeStart": "2025-12-20T07:00:00Z",
+      "timeEnd": "2025-12-21T17:00:00Z",
+      "location": "Vườn Quốc Gia Ba Vì",
+      "banner": "https://images.unsplash.com/photo-1526725702345-bdda2b97ef73?auto=format&fit=crop&w=800&q=80",
+      "participantsCount": 45,
+      "status": "UPCOMING"
+    },
+    {
+      "id": "e2",
+      "title": "Workshop: AI & Python",
+      "description": "Hướng dẫn cơ bản về Python và ứng dụng trong AI.",
+      "timeStart": "2025-11-30T14:00:00Z",
+      "timeEnd": "2025-11-30T17:00:00Z",
+      "location": "Hội trường A1",
+      "banner": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80",
+      "participantsCount": 120,
+      "status": "HAPPENING"
+    }
+  ],
+  "detail": {
+    "id": "e1",
+    "title": "Big Offline 2025 - Team Building",
+    "content": "<p>Chi tiết lịch trình...</p>",
+    "organizer": "Ban Sự Kiện",
+    "ticketPrice": 200000,
+    "isRegistered": false
+  }
+}

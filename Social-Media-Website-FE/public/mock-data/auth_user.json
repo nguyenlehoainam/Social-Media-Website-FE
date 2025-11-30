@@ -1,0 +1,35 @@
+{
+  "loginResponse": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.fake-token-123456",
+    "user": {
+      "id": "u1",
+      "username": "nguyenvana",
+      "fullName": "Nguyễn Văn A",
+      "role": "TV",
+      "avatar": "/assets/images/hinh-anime-2.jpg"
+    }
+  },
+  "me": {
+    "id": "u1",
+    "username": "nguyenvana",
+    "email": "nguyenvana@gmail.com",
+    "fullName": "Nguyễn Văn A",
+    "phone": "0987654321",
+    "dob": "2003-01-01",
+    "studentId": "2021600001",
+    "class": "CNTT1",
+    "role": "TV",
+    "avatar": "/assets/images/hinh-anime-2.jpg",
+    "bio": "Fullstack Developer @ HIT Club",
+    "socialLinks": {
+      "facebook": "fb.com/nguyenvana",
+      "github": "github.com/nguyenvana"
+    }
+  },
+  "adminStats": {
+    "totalMembers": 150,
+    "totalPosts": 320,
+    "totalEvents": 12,
+    "newMembersThisMonth": 5
+  }
+}
