@@ -248,8 +248,8 @@ const PostCard = ({ post, onViewDetail, onLikeToggled }) => {
         </div>
 
         {/* Logic hiển thị Tag */}
-        {postType === 'JOB' && <span className='recruit-tag'>Tuyển dụng</span>}
-        {postType === 'EVENT' && <span className='recruit-tag'>Sự kiện</span>}
+        {/* {postType === 'JOB' && <span className='recruit-tag'>Tuyển dụng</span>}
+        {postType === 'EVENT' && <span className='recruit-tag'>Sự kiện</span>} */}
       </div>
 
       {/* Title chỉ hiển thị cho Job/Event nếu có */}

@@ -658,5 +658,445 @@
       "avatar": "https://ui-avatars.com/api/?name=Ngo+Van+D2&background=random"
     },
     "createdAt": "2025-12-16T11:30:00Z"
+  },
+  {
+    "id": "c61",
+    "postId": "mp1",
+    "content": "Mình biết chút ít về Spring Boot nhưng chưa làm dự án lớn bao giờ, có được không bạn?",
+    "author": {
+      "id": "u50",
+      "fullName": "Trương Văn E2",
+      "avatar": "https://ui-avatars.com/api/?name=Truong+Van+E2&background=random"
+    },
+    "createdAt": "2025-12-01T08:30:00Z"
+  },
+  {
+    "id": "c62",
+    "postId": "mp1",
+    "content": "Check inbox mình nhé, mình đang tìm team làm đồ án luôn.",
+    "author": {
+      "id": "u51",
+      "fullName": "Bùi Văn F2",
+      "avatar": "https://ui-avatars.com/api/?name=Bui+Van+F2&background=random"
+    },
+    "createdAt": "2025-12-01T09:00:00Z"
+  },
+  {
+    "id": "c63",
+    "postId": "mp2",
+    "content": "Phím còn box không bác ơi?",
+    "author": {
+      "id": "u52",
+      "fullName": "Dương Thị G2",
+      "avatar": "https://ui-avatars.com/api/?name=Duong+Thi+G2&background=random"
+    },
+    "createdAt": "2025-12-05T15:00:00Z"
+  },
+  {
+    "id": "c64",
+    "postId": "mp2",
+    "content": "Xin giá yêu thương vào ib với ạ.",
+    "author": {
+      "id": "u53",
+      "fullName": "Hồ Văn H2",
+      "avatar": "https://ui-avatars.com/api/?name=Ho+Van+H2&background=random"
+    },
+    "createdAt": "2025-12-05T15:15:00Z"
+  },
+  {
+    "id": "c65",
+    "postId": "mp2",
+    "content": "Trade với Keychron K6 không bác?",
+    "author": {
+      "id": "u54",
+      "fullName": "Lý Văn I2",
+      "avatar": "https://ui-avatars.com/api/?name=Ly+Van+I2&background=random"
+    },
+    "createdAt": "2025-12-05T15:30:00Z"
+  },
+  {
+    "id": "c66",
+    "postId": "mp3",
+    "content": "Công việc có yêu cầu máy tính cấu hình cao không ạ?",
+    "author": {
+      "id": "u55",
+      "fullName": "Mai Thị K2",
+      "avatar": "https://ui-avatars.com/api/?name=Mai+Thi+K2&background=random"
+    },
+    "createdAt": "2025-12-10T09:30:00Z"
+  },
+  {
+    "id": "c67",
+    "postId": "mp3",
+    "content": "Em đăng ký 1 slot ạ.",
+    "author": {
+      "id": "u56",
+      "fullName": "Ngô Văn L2",
+      "avatar": "https://ui-avatars.com/api/?name=Ngo+Van+L2&background=random"
+    },
+    "createdAt": "2025-12-10T10:00:00Z"
+  },
+  {
+    "id": "c68",
+    "postId": "mp3",
+    "content": "Còn tuyển không bạn ơi?",
+    "author": {
+      "id": "u57",
+      "fullName": "Phan Thị M2",
+      "avatar": "https://ui-avatars.com/api/?name=Phan+Thi+M2&background=random"
+    },
+    "createdAt": "2025-12-10T10:30:00Z"
+  },
+  {
+    "id": "c69",
+    "postId": "mp4",
+    "content": "NextJS 15 mới ra nhiều cái hay lắm, hóng kèo này.",
+    "author": {
+      "id": "u58",
+      "fullName": "Quách Văn N2",
+      "avatar": "https://ui-avatars.com/api/?name=Quach+Van+N2&background=random"
+    },
+    "createdAt": "2025-12-12T16:30:00Z"
+  },
+  {
+    "id": "c70",
+    "postId": "mp4",
+    "content": "Chủ nhật được không bác? Thứ 7 em bận học thêm.",
+    "author": {
+      "id": "u59",
+      "fullName": "Sầm Thị P2",
+      "avatar": "https://ui-avatars.com/api/?name=Sam+Thi+P2&background=random"
+    },
+    "createdAt": "2025-12-12T17:00:00Z"
+  },
+  {
+    "id": "c71",
+    "postId": "mp4",
+    "content": "+1 Slot nhé, mình cũng đang nghiên cứu Server Actions.",
+    "author": {
+      "id": "u60",
+      "fullName": "Tăng Văn Q2",
+      "avatar": "https://ui-avatars.com/api/?name=Tang+Van+Q2&background=random"
+    },
+    "createdAt": "2025-12-12T17:15:00Z"
+  },
+  {
+    "id": "c72",
+    "postId": "mp5",
+    "content": "DevOps giờ đang hot, chúc bạn sớm tìm được sư phụ.",
+    "author": {
+      "id": "u61",
+      "fullName": "Uông Thị R2",
+      "avatar": "https://ui-avatars.com/api/?name=Uong+Thi+R2&background=random"
+    },
+    "createdAt": "2025-12-15T20:30:00Z"
+  },
+  {
+    "id": "c73",
+    "postId": "mp5",
+    "content": "Bạn thử tìm khóa học trên Udemy xem, mình thấy có mấy khóa Docker hay lắm.",
+    "author": {
+      "id": "u62",
+      "fullName": "Vũ Văn S2",
+      "avatar": "https://ui-avatars.com/api/?name=Vu+Van+S2&background=random"
+    },
+    "createdAt": "2025-12-15T21:00:00Z"
+  },
+  {
+    "id": "c74",
+    "postId": "p10",
+    "content": "Lớp C++ học vào thứ mấy thế ạ?",
+    "author": {
+      "id": "u63",
+      "fullName": "Xa Văn T2",
+      "avatar": "https://ui-avatars.com/api/?name=Xa+Van+T2&background=random"
+    },
+    "createdAt": "2025-12-06T15:00:00Z"
+  },
+  {
+    "id": "c75",
+    "postId": "p10",
+    "content": "Em muốn đăng ký học thì điền form ở đâu ạ?",
+    "author": {
+      "id": "u64",
+      "fullName": "Yên Thị U2",
+      "avatar": "https://ui-avatars.com/api/?name=Yen+Thi+U2&background=random"
+    },
+    "createdAt": "2025-12-06T15:30:00Z"
+  },
+  {
+    "id": "c76",
+    "postId": "p11",
+    "content": "Có minigame trúng thưởng không BTC ơi?",
+    "author": {
+      "id": "u65",
+      "fullName": "Chu Văn V2",
+      "avatar": "https://ui-avatars.com/api/?name=Chu+Van+V2&background=random"
+    },
+    "createdAt": "2025-12-15T21:30:00Z"
+  },
+  {
+    "id": "c77",
+    "postId": "p11",
+    "content": "Năm nay tổ chức hoành tráng quá!",
+    "author": {
+      "id": "u66",
+      "fullName": "Đỗ Thị X2",
+      "avatar": "https://ui-avatars.com/api/?name=Do+Thi+X2&background=random"
+    },
+    "createdAt": "2025-12-15T22:00:00Z"
+  },
+  {
+    "id": "c78",
+    "postId": "p12",
+    "content": "Có hỗ trợ dấu thực tập không ạ?",
+    "author": {
+      "id": "u67",
+      "fullName": "Lê Văn Y2",
+      "avatar": "https://ui-avatars.com/api/?name=Le+Van+Y2&background=random"
+    },
+    "createdAt": "2025-12-16T12:00:00Z"
+  },
+  {
+    "id": "c79",
+    "postId": "p12",
+    "content": "JD chi tiết gửi qua đâu ạ?",
+    "author": {
+      "id": "u68",
+      "fullName": "Nguyễn Thị Z2",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Thi+Z2&background=random"
+    },
+    "createdAt": "2025-12-16T12:30:00Z"
+  },
+  {
+    "id": "c80",
+    "postId": "mp1",
+    "content": "Mình inbox rồi nhé, bạn check tin nhắn chờ giúp mình.",
+    "author": {
+      "id": "u69",
+      "fullName": "Phạm Văn A3",
+      "avatar": "https://ui-avatars.com/api/?name=Pham+Van+A3&background=random"
+    },
+    "createdAt": "2025-12-01T09:30:00Z"
+  },
+  {
+    "id": "c81",
+    "postId": "mp2",
+    "content": "Bàn phím còn mới bao nhiêu % vậy ạ?",
+    "author": {
+      "id": "u70",
+      "fullName": "Trần Thị B3",
+      "avatar": "https://ui-avatars.com/api/?name=Tran+Thi+B3&background=random"
+    },
+    "createdAt": "2025-12-05T16:00:00Z"
+  },
+  {
+    "id": "c82",
+    "postId": "mp3",
+    "content": "Em rảnh các buổi tối trong tuần ạ.",
+    "author": {
+      "id": "u71",
+      "fullName": "Hoàng Văn C3",
+      "avatar": "https://ui-avatars.com/api/?name=Hoang+Van+C3&background=random"
+    },
+    "createdAt": "2025-12-10T11:00:00Z"
+  },
+  {
+    "id": "c83",
+    "postId": "mp4",
+    "content": "Tiếc quá, mình ở tận Hà Đông :(",
+    "author": {
+      "id": "u72",
+      "fullName": "Vũ Thị D3",
+      "avatar": "https://ui-avatars.com/api/?name=Vu+Thi+D3&background=random"
+    },
+    "createdAt": "2025-12-12T18:00:00Z"
+  },
+  {
+    "id": "c84",
+    "postId": "mp5",
+    "content": "Hay là lập group học chung DevOps đi ạ?",
+    "author": {
+      "id": "u73",
+      "fullName": "Đặng Văn E3",
+      "avatar": "https://ui-avatars.com/api/?name=Dang+Van+E3&background=random"
+    },
+    "createdAt": "2025-12-15T22:00:00Z"
+  },
+  {
+    "id": "c85",
+    "postId": "p6",
+    "content": "Đã gửi CV, hy vọng được gọi phỏng vấn ^^",
+    "author": {
+      "id": "u74",
+      "fullName": "Bùi Thị F3",
+      "avatar": "https://ui-avatars.com/api/?name=Bui+Thi+F3&background=random"
+    },
+    "createdAt": "2025-12-01T14:00:00Z"
+  },
+  {
+    "id": "c86",
+    "postId": "p9",
+    "content": "Năm ngoái đề khó vãi chưởng, năm nay mong nhẹ tay hơn.",
+    "author": {
+      "id": "u75",
+      "fullName": "Đỗ Văn G3",
+      "avatar": "https://ui-avatars.com/api/?name=Do+Van+G3&background=random"
+    },
+    "createdAt": "2025-12-05T12:00:00Z"
+  },
+  {
+    "id": "c87",
+    "postId": "p11",
+    "content": "Có tiết mục nhảy hiện đại không ạ?",
+    "author": {
+      "id": "u76",
+      "fullName": "Lương Thị H3",
+      "avatar": "https://ui-avatars.com/api/?name=Luong+Thi+H3&background=random"
+    },
+    "createdAt": "2025-12-15T22:30:00Z"
+  },
+  {
+    "id": "c88",
+    "postId": "p12",
+    "content": "Văn phòng ở khu vực nào vậy ạ?",
+    "author": {
+      "id": "u77",
+      "fullName": "Ngô Văn I3",
+      "avatar": "https://ui-avatars.com/api/?name=Ngo+Van+I3&background=random"
+    },
+    "createdAt": "2025-12-16T13:00:00Z"
+  },
+  {
+    "id": "c89",
+    "postId": "mp3",
+    "content": "Việc này làm lâu dài được không ạ?",
+    "author": {
+      "id": "u78",
+      "fullName": "Cao Thị K3",
+      "avatar": "https://ui-avatars.com/api/?name=Cao+Thi+K3&background=random"
+    },
+    "createdAt": "2025-12-10T11:30:00Z"
+  },
+  {
+    "id": "c90",
+    "postId": "mp4",
+    "content": "Cafe Highlands Cầu Giấy chỗ Xuân Thủy hay chỗ nào bác?",
+    "author": {
+      "id": "u79",
+      "fullName": "Dương Văn L3",
+      "avatar": "https://ui-avatars.com/api/?name=Duong+Van+L3&background=random"
+    },
+    "createdAt": "2025-12-12T18:30:00Z"
+  },
+  {
+    "id": "c91",
+    "postId": "mp1",
+    "content": "Mình biết Java Core và chút SQL, bạn có nhận training thêm không?",
+    "author": {
+      "id": "u80",
+      "fullName": "Phan Văn M3",
+      "avatar": "https://ui-avatars.com/api/?name=Phan+Van+M3&background=random"
+    },
+    "createdAt": "2025-12-01T10:00:00Z"
+  },
+  {
+    "id": "c92",
+    "postId": "mp2",
+    "content": "Keychron K2 bản nhôm hay nhựa thế bác?",
+    "author": {
+      "id": "u81",
+      "fullName": "Trương Thị N3",
+      "avatar": "https://ui-avatars.com/api/?name=Truong+Thi+N3&background=random"
+    },
+    "createdAt": "2025-12-05T16:30:00Z"
+  },
+  {
+    "id": "c93",
+    "postId": "mp3",
+    "content": "Công việc có yêu cầu KPI số lượng không ạ?",
+    "author": {
+      "id": "u82",
+      "fullName": "Bùi Văn P3",
+      "avatar": "https://ui-avatars.com/api/?name=Bui+Van+P3&background=random"
+    },
+    "createdAt": "2025-12-10T12:00:00Z"
+  },
+  {
+    "id": "c94",
+    "postId": "mp4",
+    "content": "Chủ thớt cho xin địa chỉ quán cụ thể với.",
+    "author": {
+      "id": "u83",
+      "fullName": "Đặng Thị Q3",
+      "avatar": "https://ui-avatars.com/api/?name=Dang+Thi+Q3&background=random"
+    },
+    "createdAt": "2025-12-12T19:00:00Z"
+  },
+  {
+    "id": "c95",
+    "postId": "mp5",
+    "content": "Hóng ké, mình cũng đang tìm hiểu về CI/CD Jenkins.",
+    "author": {
+      "id": "u84",
+      "fullName": "Hồ Văn R3",
+      "avatar": "https://ui-avatars.com/api/?name=Ho+Van+R3&background=random"
+    },
+    "createdAt": "2025-12-15T22:30:00Z"
+  },
+  {
+    "id": "c96",
+    "postId": "p1",
+    "content": "Training xong có bài test không anh?",
+    "author": {
+      "id": "u85",
+      "fullName": "Lý Thị S3",
+      "avatar": "https://ui-avatars.com/api/?name=Ly+Thi+S3&background=random"
+    },
+    "createdAt": "2025-11-28T09:30:00Z"
+  },
+  {
+    "id": "c97",
+    "postId": "p3",
+    "content": "Có cần cài Figma trước không ạ?",
+    "author": {
+      "id": "u86",
+      "fullName": "Ngô Văn T3",
+      "avatar": "https://ui-avatars.com/api/?name=Ngo+Van+T3&background=random"
+    },
+    "createdAt": "2025-11-29T11:30:00Z"
+  },
+  {
+    "id": "c98",
+    "postId": "p9",
+    "content": "Năm nay giải nhất được bao nhiêu thế mọi người?",
+    "author": {
+      "id": "u87",
+      "fullName": "Vũ Thị U3",
+      "avatar": "https://ui-avatars.com/api/?name=Vu+Thi+U3&background=random"
+    },
+    "createdAt": "2025-12-05T12:30:00Z"
+  },
+  {
+    "id": "c99",
+    "postId": "p11",
+    "content": "Không có người yêu đi một mình được không ạ? :((",
+    "author": {
+      "id": "u88",
+      "fullName": "Dương Văn V3",
+      "avatar": "https://ui-avatars.com/api/?name=Duong+Van+V3&background=random"
+    },
+    "createdAt": "2025-12-15T23:00:00Z"
+  },
+  {
+    "id": "c100",
+    "postId": "p12",
+    "content": "Mình có kinh nghiệm 1 năm ReactJS, đã gửi CV qua mail nhé.",
+    "author": {
+      "id": "u89",
+      "fullName": "Phùng Thị X3",
+      "avatar": "https://ui-avatars.com/api/?name=Phung+Thi+X3&background=random"
+    },
+    "createdAt": "2025-12-16T13:30:00Z"
   }
 ]

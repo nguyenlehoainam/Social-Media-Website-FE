@@ -9,12 +9,100 @@
     "author": {
       "id": "u1",
       "fullName": "Nguyễn Văn A",
-      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+      "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-11-28T08:00:00Z",
     "likesCount": 25,
     "commentsCount": 3,
     "isLiked": true
+  },
+  {
+    "id": "mp1",
+    "type": "JOB",
+    "title": "Tìm đồng đội làm đồ án tốt nghiệp (ReactJS + Java)",
+    "content": "Mình đang làm đề tài quản lý thư viện, cần tìm 1 bạn làm BE Java Spring Boot. Yêu cầu: Nắm chắc RESTful API. Cam kết bao cơm trưa!",
+    "images": [],
+    "author": {
+      "id": "u1",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "/assets/images/hinh-anime-2.jpg"
+    },
+    "createdAt": "2025-12-01T08:00:00Z",
+    "likesCount": 5,
+    "commentsCount": 2,
+    "isLiked": false
+  },
+  {
+    "id": "mp2",
+    "type": "EVENT",
+    "title": "Góc pass đồ: Bàn phím cơ Keychron K2",
+    "content": "Do lên đời phím mới nên mình pass lại em Keychron K2 Red Switch còn bảo hành 6 tháng. Giá yêu thương cho anh em CLB.",
+    "images": [
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80"
+    ],
+    "author": {
+      "id": "u1",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "/assets/images/hinh-anime-2.jpg"
+    },
+    "createdAt": "2025-12-05T14:30:00Z",
+    "likesCount": 12,
+    "commentsCount": 8,
+    "isLiked": true
+  },
+  {
+    "id": "mp3",
+    "type": "JOB",
+    "title": "Tuyển CTV nhập liệu part-time (Làm online)",
+    "content": "Ông anh mình cần tuyển 2 bạn nhập liệu excel buổi tối. Lương 25k/h. Phù hợp cho các bạn năm 1, năm 2 muốn kiếm thêm.",
+    "salary": "25.000 VNĐ/h",
+    "location": "Online",
+    "deadline": "2025-12-20",
+    "author": {
+      "id": "u1",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+    },
+    "createdAt": "2025-12-10T09:00:00Z",
+    "likesCount": 20,
+    "commentsCount": 15,
+    "isLiked": false
+  },
+  {
+    "id": "mp4",
+    "type": "EVENT",
+    "title": "Mời anh em đi cafe chém gió công nghệ",
+    "content": "Cuối tuần này rảnh, có anh em nào muốn ra cafe Highlands Cầu Giấy bàn luận về NextJS 15 không nhỉ? Mình bao nước!",
+    "images": [
+      "https://images.unsplash.com/photo-1453614512568-c4024d139247?auto=format&fit=crop&w=800&q=80"
+    ],
+    "author": {
+      "id": "u1",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+    },
+    "createdAt": "2025-12-12T16:00:00Z",
+    "likesCount": 45,
+    "commentsCount": 20,
+    "isLiked": true
+  },
+  {
+    "id": "mp5",
+    "type": "JOB",
+    "title": "Cần tìm mentor hướng dẫn DevOps cơ bản",
+    "content": "Mình muốn tìm hiểu về Docker và CI/CD nhưng chưa biết bắt đầu từ đâu. Cần tìm một sư phụ chỉ dẫn lộ trình. Xin hậu tạ!",
+    "salary": "Thỏa thuận",
+    "location": "Hà Nội",
+    "deadline": "2026-01-01",
+    "author": {
+      "id": "u1",
+      "fullName": "Nguyễn Văn A",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+    },
+    "createdAt": "2025-12-15T20:00:00Z",
+    "likesCount": 8,
+    "commentsCount": 4,
+    "isLiked": false
   },
   {
     "id": "p2",

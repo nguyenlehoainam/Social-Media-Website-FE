@@ -206,7 +206,7 @@ const Header = () => {
               My Posts
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to='/event' className={({ isActive }) => (isActive ? 'active' : '')}>
               Events
             </NavLink>
@@ -215,7 +215,7 @@ const Header = () => {
             <NavLink to='/job' className={({ isActive }) => (isActive ? 'active' : '')}>
               Recruitment
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
 

@@ -242,11 +242,18 @@ const UserHomePage = () => {
     fetchPosts()
   }, [pagination.current, pagination.size])
 
-  const handlePostCreated = () => {
-    if (pagination.current === 0) {
-      fetchPosts()
+  const handlePostCreated = (newPost) => {
+    // Nếu có bài viết mới được gửi từ CreatePost
+    if (newPost) {
+      setPosts((prev) => [newPost, ...prev]) // Thêm vào đầu danh sách
+      setTotalPosts((prev) => prev + 1)
     } else {
-      setPagination((prev) => ({ ...prev, current: 0 }))
+      // Fallback cho logic cũ
+      if (pagination.current === 0) {
+        fetchPosts()
+      } else {
+        setPagination((prev) => ({ ...prev, current: 0 }))
+      }
     }
   }
 
