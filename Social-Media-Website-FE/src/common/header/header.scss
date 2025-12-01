@@ -12,11 +12,12 @@ $nav-link-hover-color: $primary-color;
   justify-content: space-between;
   align-items: center;
   padding: $header-padding-desktop;
-  background-color: $white-color;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  background: linear-gradient(to bottom, #073963, #003773, #09152f);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
   z-index: 1000;
+  // background-color: transparent;
 }
 
 .logo {
@@ -39,7 +40,7 @@ $nav-link-hover-color: $primary-color;
 
   li a {
     text-decoration: none;
-    color: $nav-link-color;
+    color: #e1f0ff;
     font-weight: 600;
     font-size: $font-size-md;
     position: relative;
@@ -47,11 +48,11 @@ $nav-link-hover-color: $primary-color;
     transition: color 0.2s ease;
 
     &:hover {
-      color: $nav-link-hover-color;
+      color: #93ceff;
     }
 
     &.active {
-      color: $primary-color;
+      color: hsl(229, 100%, 81%);
       &::after {
         content: '';
         position: absolute;
@@ -85,7 +86,7 @@ $nav-link-hover-color: $primary-color;
     list-style: none;
     top: 60px;
     right: 8px;
-    background-color: $white-color;
+    background-color: rgb(215, 223, 255);
     box-shadow: $box-shadow;
     border-radius: 8px;
     z-index: 1000;

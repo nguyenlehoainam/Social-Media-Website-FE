@@ -1,0 +1,98 @@
+.post-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  // ... (Các phần header, content, media giữ nguyên)
+
+  .post-actions {
+    display: flex;
+    justify-content: space-between; // Đẩy nhóm Like/Comment sang trái, nút Edit sang phải
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f2f5;
+
+    .action-group {
+      display: flex;
+      gap: 16px;
+
+      .action-button {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: none;
+        border: none;
+        color: #65676b;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 6px 8px;
+        border-radius: 4px;
+        transition: background 0.2s;
+
+        &:hover {
+          background-color: #f2f2f2;
+        }
+
+        &.active {
+          color: #1877f2; // Màu xanh Like
+        }
+
+        &.apply-button {
+          color: #fff;
+          background-color: #1877f2;
+          padding: 6px 12px;
+          border-radius: 20px;
+
+          &:hover {
+            background-color: #166fe5;
+          }
+
+          &:disabled {
+            background-color: #b0c2db;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+
+    // --- STYLE CHO NÚT EDIT TẠI ĐÂY ---
+    .post-edit-action {
+      .post-edit-button {
+        background: transparent;
+        border: 1px solid #dcdfe4;
+        border-radius: 18px; // Bo tròn viên thuốc
+        padding: 6px 16px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #4b4c4f;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        // Hiệu ứng khi di chuột vào
+        &:hover {
+          background-color: #a3bdff;
+          border-color: #cbced4;
+          color: #237bff;
+        }
+
+        // Hiệu ứng khi bấm
+        &:active {
+          transform: scale(0.96);
+          background-color: #d8dadf;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.scss'
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/logo2.png'
 import Facebook from '../../assets/images/facebook.webp'
 import gmail from '../../assets/images/gmail.png'
 import youtube from '../../assets/images/youtube.png'

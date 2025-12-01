@@ -160,13 +160,19 @@
 import React, { useState, useEffect } from 'react'
 import { Pagination } from 'antd'
 import toast from 'react-hot-toast'
-import CreatePost from '../../components/createPost/createPost'
-import { getmyposts } from '../../apis/posts.api'
-import './myposts.scss'
-import MyPostsComponent from '../../components/myPosts/myPosts'
-import MyPostDtails from '../../components/myPostDetails/myPostDetails'
-import CircularProgress from '@mui/joy/CircularProgress'
 import { useSelector } from 'react-redux'
+import CircularProgress from '@mui/joy/CircularProgress'
+
+// API
+import { getmyposts } from '../../apis/posts.api'
+
+// Components
+import CreatePost from '../../components/createPost/createPost'
+import MyPostDtails from '../../components/myPostDetails/myPostDetails'
+// Import đúng tên file component con (Viết hoa chữ cái đầu để tránh lỗi trên Linux/Vercel)
+import MyPostsComponent from '../../components/myPosts/myPosts'
+
+import './myposts.scss'
 
 const Myposts = () => {
   const authState = useSelector((state) => state.auth.auth)
@@ -182,26 +188,30 @@ const Myposts = () => {
   const [selectedPost, setSelectedPost] = useState(null)
   const [isPaging, setIsPaging] = useState(false)
 
+  // --- 1. LẤY DỮ LIỆU & XỬ LÝ (MOCK MODE) ---
   const fetchPosts = async () => {
     try {
       setIsLoading(true)
-      // 1. Gọi API lấy toàn bộ danh sách (Mock trả về list tổng)
+      // Gọi API lấy toàn bộ danh sách (Mock trả về list tổng)
       const response = await getmyposts()
-
       const allPosts = Array.isArray(response) ? response : response?.data?.content || []
 
-      // 2. LOGIC MOCK: LỌC BÀI VIẾT CỦA TÔI
-      // ID người dùng hiện tại (Lấy từ redux hoặc fallback 'u1' của mock)
-      const currentUserId = currentUser?.id || currentUser?.user?.id || 'u1'
+      // A. LỌC BÀI VIẾT CỦA TÔI
+      const currentUserId = currentUser?.id || currentUser?.user?.id || 'u1' // Fallback 'u1' cho mock
 
       const myPostList = allPosts.filter((post) => {
-        // Mock data dùng key 'author', API cũ dùng 'creator'
         const authorId = post.author?.id || post.creator?.id
-        // So sánh tương đối (đề phòng string/number)
         return String(authorId) === String(currentUserId)
       })
 
-      // 3. LOGIC MOCK: PHÂN TRANG CLIENT
+      // B. SẮP XẾP (MỚI NHẤT LÊN ĐẦU)
+      myPostList.sort((a, b) => {
+        const dateA = new Date(a.createdAt || 0)
+        const dateB = new Date(b.createdAt || 0)
+        return dateB - dateA
+      })
+
+      // C. PHÂN TRANG CLIENT
       const total = myPostList.length
       const startIndex = pagination.current * pagination.size
       const endIndex = startIndex + pagination.size
@@ -222,18 +232,17 @@ const Myposts = () => {
     fetchPosts()
   }, [pagination.current, pagination.size, currentUser])
 
+  // --- 2. CÁC HÀM XỬ LÝ SỰ KIỆN ---
+
   const handlePostCreated = (newPost) => {
-    // Nếu nhận được bài mới từ CreatePost (giả lập), thêm ngay vào list để hiển thị
     if (newPost) {
+      // Thêm bài mới vào đầu danh sách ngay lập tức
       setPosts((prev) => [newPost, ...prev])
       setTotalPosts((prev) => prev + 1)
     } else {
-      // Logic cũ (reload trang 1)
-      if (pagination.current === 0) {
-        fetchPosts()
-      } else {
-        setPagination((prev) => ({ ...prev, current: 0 }))
-      }
+      // Fallback: Reload lại từ trang 1
+      if (pagination.current === 0) fetchPosts()
+      else setPagination((prev) => ({ ...prev, current: 0 }))
     }
   }
 
@@ -250,7 +259,12 @@ const Myposts = () => {
     setSelectedPost(postToView)
   }
 
-  // --- Fake Update State (Optimistic UI) ---
+  const handleCloseModal = () => {
+    setSelectedPost(null)
+  }
+
+  // --- 3. OPTIMISTIC UPDATES (Cập nhật UI giả lập) ---
+
   const handleLikeToggled = (targetPostId, newLikeState, newLikeCount) => {
     setPosts((currentPosts) =>
       currentPosts.map((p) => {
@@ -274,7 +288,6 @@ const Myposts = () => {
       currentPosts.map((p) => {
         const pId = p.id || p.postId || p.eventId
         if (pId === targetPostId) {
-          // Tăng biến đếm comment (hỗ trợ cả key cũ và mới)
           const currentCount = (p.commentsCount || p.countComment || 0) + 1
           return { ...p, commentsCount: currentCount, countComment: currentCount }
         }
@@ -301,17 +314,14 @@ const Myposts = () => {
       currentPosts.map((p) => {
         const pId = p.id || p.postId
         const uId = updatedPost.id || updatedPost.postId
+        // Merge dữ liệu cũ và mới để giữ lại các trường không đổi
         return pId === uId ? { ...p, ...updatedPost } : p
       }),
     )
-    toast.success('Bài đăng đã được cập nhật (Giả lập)!')
+    toast.success('Bài đăng đã được cập nhật!')
   }
 
-  const handleCloseModal = () => {
-    setSelectedPost(null)
-  }
-
-  // Helper lấy ID cho key (tránh trùng lặp)
+  // Helper tạo key duy nhất (tránh lỗi duplicate key của React)
   const getPostKey = (post) => post.id || post.postId || post.eventId || Math.random()
 
   return (

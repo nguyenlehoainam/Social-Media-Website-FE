@@ -224,8 +224,8 @@ const LoginPage = () => {
       <div className='login-page-container'>
         <div className='login-card'>
           <div className='login-header'>
-            <h1 className='welcom-section'>Welcome to</h1>
-            <h1> VINBOOK</h1>
+            <h1 className='welcom-section'>Welcome to VINBOOK</h1>
+
             <p>Sign in to continue to your account</p>
           </div>
 

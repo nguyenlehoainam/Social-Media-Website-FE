@@ -4,7 +4,7 @@
     "user": {
       "id": "u1",
       "username": "nguyenvana",
-      "fullName": "Nguyễn Văn A",
+      "fullName": "Nguyễn Lê Hoài Nam",
       "role": "TV",
       "avatar": "/assets/images/hinh-anime-2.jpg"
     }
@@ -13,7 +13,7 @@
     "id": "u1",
     "username": "nguyenvana",
     "email": "nguyenvana@gmail.com",
-    "fullName": "Nguyễn Văn A",
+    "fullName": "Nguyễn Lê Hoài Nam",
     "phone": "0987654321",
     "dob": "2003-01-01",
     "studentId": "2021600001",

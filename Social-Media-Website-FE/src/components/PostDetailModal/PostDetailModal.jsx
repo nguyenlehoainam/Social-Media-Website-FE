@@ -499,8 +499,8 @@ const PostDetailModal = ({ post, onClose, onCommentAdded, onCommentDeleted, onLi
                     : 'Vừa xong'}
                 </span>
               </div>
-              {postType === 'JOB' && <span className='recruit-tag'>Tuyển dụng</span>}
-              {postType === 'EVENT' && <span className='recruit-tag event'>Sự kiện</span>}
+              {/* {postType === 'JOB' && <span className='recruit-tag'>Tuyển dụng</span>}
+              {postType === 'EVENT' && <span className='recruit-tag event'>Sự kiện</span>} */}
             </div>
 
             {post.title && <p className='post-title'>{post.title}</p>}
@@ -520,11 +520,11 @@ const PostDetailModal = ({ post, onClose, onCommentAdded, onCommentDeleted, onLi
                 <button onClick={handleFocusCommentInput} className='action-button'>
                   <Chat /> <span>{comments.length}</span>
                 </button>
-                {postType === 'JOB' && author.fullName !== infoUser?.fullName && (
+                {/* {postType === 'JOB' && author.fullName !== infoUser?.fullName && (
                   <button onClick={handleApply} className='action-button apply-button'>
                     <Handbag /> <span>{isLoadingApply ? 'Đang nộp...' : 'Ứng tuyển'}</span>
                   </button>
-                )}
+                )} */}
               </div>
             </div>
           </div>

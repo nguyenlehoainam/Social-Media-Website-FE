@@ -1,5 +1,5 @@
-$primary-color: #ff8a00;
-$primary-color-dark: #e67c00;
+$primary-color: #3b82f6;
+$primary-color-dark: #3b82f6;
 $primary-color-light: #ffe7cc;
 $primary-color-focus: #ffdeba;
 
@@ -233,13 +233,13 @@ $transition-speed: 0.25s;
     }
 
     &.active {
-      color: $primary-color;
+      color: #3b82f6;
     }
 
     &.apply-button {
-      color: $primary-color;
+      color: #3b82f6;
       &:hover {
-        background-color: $primary-color-light;
+        background-color: #3b82f6;
       }
     }
   }
@@ -267,15 +267,15 @@ $transition-speed: 0.25s;
 
     &:focus {
       outline: none;
-      border-color: $primary-color;
-      box-shadow: 0 0 0 3px $primary-color-focus;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px #3b82f6;
     }
   }
 
   .comment-submit-button {
     background: none;
     border: none;
-    color: $primary-color;
+    color: #575757;
     font-weight: 600;
     cursor: pointer;
     padding: $space-sm $space-md;

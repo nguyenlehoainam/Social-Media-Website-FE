@@ -201,7 +201,7 @@ const MyPosts = ({ post, onPostUpdated, onViewDetail, onLikeToggled }) => {
           <span className='post-user-name'>{displayName}</span>
           <span className='post-user-create'>{displayDate}</span>
         </div>
-        <span className='recruit-tag'>{postType === 'JOB' ? 'Recruitment' : 'Event'}</span>
+        {/* <span className='recruit-tag'>{postType === 'JOB' ? 'Recruitment' : 'Event'}</span> */}
       </div>
 
       {/* CONTENT */}

@@ -471,7 +471,7 @@ const MyPostDtails = ({ post, onClose, onCommentAdded, onCommentDeleted, onLikeT
                   {post.createdAt ? new Date(post.createdAt).toLocaleDateString() : 'Vừa xong'}
                 </span>
               </div>
-              <span className='recruit-tag'>Recruitment</span>
+              {/* <span className='recruit-tag'>Recruitment</span> */}
             </div>
 
             {post.title && <p className='post-title'>{post.title}</p>}
@@ -491,9 +491,9 @@ const MyPostDtails = ({ post, onClose, onCommentAdded, onCommentDeleted, onLikeT
                 <button onClick={handleFocusCommentInput} className='action-button'>
                   <Chat /> <span>{comments.length}</span>
                 </button>
-                <button onClick={handleApply} className='action-button apply-button'>
+                {/* <button onClick={handleApply} className='action-button apply-button'>
                   <Handbag /> <span>{isLoadingApply ? 'Downloading...' : 'Download CV'}</span>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

@@ -390,8 +390,8 @@ const CreatePost = ({ posts, onPostCreated }) => {
             <div className='modal-footer'>
               <div className='modal-footer-left'>
                 <div className='type-selector'>
-                  <p>Loại: </p>
-                  <p className='type-posts'>Recruitment (Tuyển dụng)</p>
+                  {/* <p>Loại: </p>
+                  <p className='type-posts'>Recruitment (Tuyển dụng)</p> */}
                 </div>
               </div>
               <button

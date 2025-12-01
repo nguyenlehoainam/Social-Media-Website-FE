@@ -1,5 +1,5 @@
-$primary-color: #ff8a00;
-$primary-color-dark: #e67a00;
+$primary-color: #5567c9;
+$primary-color-dark: #001949;
 $primary-tag-background: #fff2e0;
 
 $text-primary: #1c1e21;
@@ -255,7 +255,7 @@ $transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
     gap: $space-sm;
     .icon-button {
       @include circle-icon-button;
-      color: $primary-color;
+      color: #5567c9;
     }
   }
 }
@@ -292,7 +292,7 @@ $transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .modal-submit-button {
-    background-color: $primary-color;
+    background-color: #3b82f6;
     color: $background-white;
     border: none;
     padding: 0;

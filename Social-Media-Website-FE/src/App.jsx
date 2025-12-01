@@ -147,8 +147,9 @@ import { useEffect } from 'react'
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton'
 import EventPage from './pages/EventPage/EventPage'
 import UserHomePage from './pages/UserHomePage/UserHomePage'
-import MyPosts from './components/myPosts/MyPosts'
 import JobPage from './pages/jobPage/JobPage'
+import Myposts from './pages/my-posts/Myposts'
+import RegisterPage from './pages/RegisterPage/RegisterPage'
 
 function App() {
   const { user } = useAuth() // Destructure user trực tiếp từ hook
@@ -243,6 +244,10 @@ function App() {
       element: <LoginPage />,
     },
     {
+      path: 'register',
+      element: <RegisterPage />,
+    },
+    {
       path: '/forgotpassword',
       element: <ForgotPasswordPage />,
     },
@@ -269,7 +274,7 @@ function App() {
         },
         {
           path: 'my-posts',
-          element: <MyPosts />,
+          element: <Myposts />,
         },
       ],
     },

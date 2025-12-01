@@ -8,7 +8,7 @@
     ],
     "author": {
       "id": "u1",
-      "fullName": "Nguyễn Văn A",
+      "fullName": "Nguyễn Lê Hoài Nam",
       "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-11-28T08:00:00Z",
@@ -24,7 +24,7 @@
     "images": [],
     "author": {
       "id": "u1",
-      "fullName": "Nguyễn Văn A",
+      "fullName": "Nguyễn Lê Hoài Nam",
       "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-12-01T08:00:00Z",
@@ -42,7 +42,7 @@
     ],
     "author": {
       "id": "u1",
-      "fullName": "Nguyễn Văn A",
+      "fullName": "Nguyễn Lê Hoài Nam",
       "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-12-05T14:30:00Z",
@@ -60,8 +60,8 @@
     "deadline": "2025-12-20",
     "author": {
       "id": "u1",
-      "fullName": "Nguyễn Văn A",
-      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+      "fullName": "Nguyễn Lê Hoài Nam",
+      "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-12-10T09:00:00Z",
     "likesCount": 20,
@@ -74,12 +74,12 @@
     "title": "Mời anh em đi cafe chém gió công nghệ",
     "content": "Cuối tuần này rảnh, có anh em nào muốn ra cafe Highlands Cầu Giấy bàn luận về NextJS 15 không nhỉ? Mình bao nước!",
     "images": [
-      "https://images.unsplash.com/photo-1453614512568-c4024d139247?auto=format&fit=crop&w=800&q=80"
+      "https://genk.mediacdn.vn/thumb_w/640/N0WoyYblO3QdmZFKPMtKnadHAHTevz/Image/2012/MINH-DUNG/70316774_593e0.png"
     ],
     "author": {
       "id": "u1",
-      "fullName": "Nguyễn Văn A",
-      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+      "fullName": "Nguyễn Lê Hoài Nam",
+      "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-12-12T16:00:00Z",
     "likesCount": 45,
@@ -96,8 +96,8 @@
     "deadline": "2026-01-01",
     "author": {
       "id": "u1",
-      "fullName": "Nguyễn Văn A",
-      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+      "fullName": "Nguyễn Lê Hoài Nam",
+      "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-12-15T20:00:00Z",
     "likesCount": 8,
@@ -168,8 +168,8 @@
     ],
     "author": {
       "id": "u1",
-      "fullName": "Nguyễn Văn A",
-      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+      "fullName": "Nguyễn Lê Hoài Nam",
+      "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-11-30T08:30:00Z",
     "likesCount": 89,
@@ -240,8 +240,8 @@
     ],
     "author": {
       "id": "u1",
-      "fullName": "Nguyễn Văn A",
-      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Van+A&background=random"
+      "fullName": "Nguyễn Lê Hoài Nam",
+      "avatar": "/assets/images/hinh-anime-2.jpg"
     },
     "createdAt": "2025-12-05T08:00:00Z",
     "likesCount": 150,
