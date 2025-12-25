@@ -38,7 +38,14 @@ import { api } from '.'
 import { ApiConstants } from '../constants/api.constant'
 
 const membersApi = () => ({
-  getAllMembers: async (params) => api.get(ApiConstants.members.getAllMembers, { params }),
+  getAllMembers: async (params) =>
+    api.get(ApiConstants.members.getAllMembers, {
+      params: {
+        page: params.page,
+        size: params.size,
+        search: params.search, // Gửi keyword tìm kiếm lên server
+      },
+    }),
   detailMembers: async (id) => api.get(ApiConstants.members.detailMembers),
 
   // MOCK: Update -> get

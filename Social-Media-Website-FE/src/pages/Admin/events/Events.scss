@@ -43,7 +43,7 @@
         padding: 12px;
 
         &--search {
-          background-color: style.$secondary-color;
+          background-color: #588ab8;
         }
 
         // &--import {
@@ -51,7 +51,7 @@
         // }
 
         &:hover {
-          background-color: #f57c00;
+          background-color: #8d9ac5;
         }
       }
       .button-add {
@@ -65,8 +65,8 @@
         color: style.$secondary-color;
         cursor: pointer;
         &:hover {
-          border: 1px solid #f57c00;
-          color: #f57c00;
+          border: 1px solid #8d9ac5;
+          color: #8d9ac5;
         }
       }
 
@@ -76,7 +76,7 @@
 
       .title-add {
         font-weight: bold;
-            font-size: 14px;
+        font-size: 14px;
       }
     }
   }

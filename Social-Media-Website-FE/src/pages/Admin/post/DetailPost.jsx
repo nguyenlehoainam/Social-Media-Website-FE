@@ -1,177 +1,156 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { getDetailpost } from '../../../apis/postAdmin'
 import { MdDelete } from 'react-icons/md'
 import './DetailPost.scss'
 import avatarDefault from '../../../assets/images/avatarDefault.jpg'
-import { IoArrowBackSharp } from "react-icons/io5";
+import { IoArrowBackSharp } from 'react-icons/io5'
 import Delete from '../../../components/admin/delete/Delete'
-import CircularProgress from '@mui/joy/CircularProgress';
+import CircularProgress from '@mui/joy/CircularProgress'
 import toast from 'react-hot-toast'
+
 const PostDetail = () => {
-  const [action, setAction] = useState('like')
-  const [post, setPost] = useState(null)
   const { id } = useParams()
   const navigate = useNavigate()
-  const [postId, setPostId] = useState()
-  const fetchPostDetail = async (id) => {
-    try {
-      const res = await getDetailpost(id)
-      setPost(res?.data)
-    } catch (error) {
-      toast.error("Lấy dữ liệu bài đăng thất bại")
-    }
-  }
+  const [action, setAction] = useState('like')
+  const [post, setPost] = useState(null)
+  const [selectedCommentId, setSelectedCommentId] = useState()
+  const [deletePopup, setDeletePopup] = useState({ open: false, type: '' })
+
+  // Mock dữ liệu chi tiết cho 1 bài post
   useEffect(() => {
-    if (id) fetchPostDetail(id)
+    setPost({
+      postId: id,
+      title: 'HIT Code War 2025: Khởi động',
+      description:
+        'Cuộc thi code thuật toán lớn nhất năm đã trở lại. Tổng giải thưởng lên tới 10 triệu đồng.',
+      createdAt: '2025-12-05T08:00:00Z',
+      creator: { fullName: 'Nguyễn Lê Hoài Nam' },
+      countReaction: 2,
+      countComment: 2,
+      images: [
+        'https://images.unsplash.com/photo-1504384308090-c54be3855092?auto=format&fit=crop&w=800&q=80',
+      ],
+      reactionResponseDTOS: [
+        { userPostResponseDTO: { fullName: 'Trần Văn A', avatarUrl: null } },
+        { userPostResponseDTO: { fullName: 'Lê Thị B', avatarUrl: null } },
+      ],
+      commentResponseDTOS: [
+        {
+          commentId: 'c1',
+          content: 'Sáng nay mình vừa đăng ký xong!',
+          createdAt: '2025-12-06T09:00:00Z',
+          userPostResponseDTO: { fullName: 'Phạm Minh Tuấn' },
+        },
+        {
+          commentId: 'c2',
+          content: 'Đề năm nay có khó không admin?',
+          createdAt: '2025-12-06T10:30:00Z',
+          userPostResponseDTO: { fullName: 'Hoàng Thu Thảo' },
+        },
+      ],
+    })
   }, [id])
 
-  const [deletePopup, setDeletePopup] = useState({
-    open: false,
-    type: '', // 'user' hoặc 'event'
-  })
-  const handleDelete = (postId) => {
-    setPostId(postId)
-    setDeletePopup({
-      open: true,
-      type: 'comment',
+  // Logic Xóa comment
+  const performDeleteComment = (commentId) => {
+    const updatedComments = post.commentResponseDTOS.filter((c) => c.commentId !== commentId)
+    setPost({
+      ...post,
+      commentResponseDTOS: updatedComments,
+      countComment: updatedComments.length,
     })
+    toast.success('Đã xóa bình luận!')
+    setDeletePopup({ open: false, type: '' })
   }
 
-  const formatDate = (iso) => {
-    const d = new Date(iso)
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(
-      d.getDate(),
-    ).padStart(2, '0')}`
+  const handleDeleteComment = (commentId) => {
+    setSelectedCommentId(commentId)
+    setDeletePopup({ open: true, type: 'comment' })
   }
+
+  const formatDate = (iso) => dayjs(iso).format('YYYY-MM-DD')
 
   if (!post)
-  return (
-    <div className="loading">
-      <CircularProgress />
-    </div>
-  );
+    return (
+      <div className='loading'>
+        <CircularProgress />
+      </div>
+    )
 
-
   return (
-    
     <div className='post-h2'>
       <div className='title'>
-        <IoArrowBackSharp className='title__icon' onClick={() => navigate('/admin/posts')}/>
-        <h2 className='post-title'>Chi tiết bài đăng của người dùng</h2>
+        <IoArrowBackSharp className='title__icon' onClick={() => navigate('/admin/posts')} />
+        <h2 className='post-title'>Chi tiết bài đăng</h2>
       </div>
-      
+
       <div className='post-detail'>
         <div className='post-detail__main'>
           <h3>{post.title}</h3>
           <p>
-            <span style={{ fontWeight: 600 }}> Người đăng: </span>
-            {post.creator?.fullName || 'Không xác định'}
+            <strong>Người đăng:</strong> {post.creator?.fullName}
           </p>
           <p>
-            <span style={{ fontWeight: 600 }}>Ngày đăng: </span>
-            {formatDate(post.createdAt)}
+            <strong>Ngày đăng:</strong> {formatDate(post.createdAt)}
           </p>
           <div className='post-detail__content'>
-            <p style={{ lineHeight: '24px' }}>
-              <span style={{ fontWeight: 600 }}>Mô tả: </span>
-              {post.description}
-            </p>
+            <p>{post.description}</p>
           </div>
           <div className='image-wrapper'>
-            {post.images?.[0] ? (
-              <img src={post.images[0]} alt='Hình ảnh bài đăng' />
-            ) : (
-              <p style={{ fontStyle: 'italic', color: '#888' }}>
-                Không có hình ảnh cho bài đăng này.
-              </p>
-            )}
+            {post.images?.[0] && <img src={post.images[0]} alt='Post' />}
           </div>
         </div>
 
         <div className='reaction'>
           <div className='reaction-action'>
-            <p onClick={() => setAction('like')}>
-              <span className={action === 'like' ? 'change' : ''}>Reaction </span>
-              <span>̣({post.countReaction})</span>
+            <p onClick={() => setAction('like')} className={action === 'like' ? 'change' : ''}>
+              Reaction ({post.countReaction})
             </p>
-            <p onClick={() => setAction('comment')}>
-              <span className={action === 'comment' ? 'change' : ''}>Comment </span>
-              <span> ({post.countComment}) </span>
+            <p
+              onClick={() => setAction('comment')}
+              className={action === 'comment' ? 'change' : ''}>
+              Comment ({post.countComment})
             </p>
           </div>
 
           {action === 'like' ? (
             <div className='reaction-likes'>
-              {post.reactionResponseDTOS?.length === 0 ? (
-                <p>Chưa có lượt thích nào.</p>
-              ) : (
-                post.reactionResponseDTOS.map((r, i) => (
-                  <div key={i} className='like'>
-                    <img src={r.userPostResponseDTO?.avatarUrl || avatarDefault} alt='avatar' />
-                    <div className='like__info'>
-                      <p className='like__name'>
-                        {r.userPostResponseDTO?.fullName || 'Người dùng ẩn danh'}
-                      </p>
-                    </div>
-                  </div>
-                ))
-              )}
+              {post.reactionResponseDTOS.map((r, i) => (
+                <div key={i} className='like'>
+                  <img src={avatarDefault} alt='avatar' />
+                  <p>{r.userPostResponseDTO?.fullName}</p>
+                </div>
+              ))}
             </div>
           ) : (
             <div className='reaction-comments'>
-              {post.commentResponseDTOS?.length === 0 ? (
-                <p>Chưa có bình luận nào.</p>
-              ) : (
-                post.commentResponseDTOS.map((c) => (
-                  <div key={c.commentId} className='comment'>
-                    {/* <img
-                      src={c.userPostResponseDTO?.avatarUrl || 'https://i.pravatar.cc/40'}
-                      alt='avatar'
-                    /> */}
-                    <div className='comment__info'>
-                      <div
-                        style={{
-                          display: 'flex',
-                          alignItems: 'start',
-                          justifyContent: 'space-between',
-                          width: '100%',
-                        }}>
-                        <p className='comment__name'>
-                          <img
-                            src={c.userPostResponseDTO?.avatarUrl || avatarDefault}
-                            alt='avatar'
-                          />
-                          <div>
-                            {c.userPostResponseDTO?.fullName || 'Người dùng ẩn danh'}
-                            <p className='comment__time'>{formatDate(c.createdAt)}</p>
-                          </div>
-                        </p>
-                        <MdDelete
-                          size={25}
-                          color='#f5945c'
-                          className='comment__delete'
-                          onClick={() => handleDelete(c.commentId)}
-                        />
-                      </div>
-                      <p className='comment__text'>{c.content}</p>
-                      {/* <p className='comment__time'>{formatDate(c.createdAt)}</p> */}
+              {post.commentResponseDTOS.map((c) => (
+                <div key={c.commentId} className='comment'>
+                  <div className='comment__info'>
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                      <p className='comment__name'>{c.userPostResponseDTO?.fullName}</p>
+                      <MdDelete
+                        size={20}
+                        color='#f5945c'
+                        cursor='pointer'
+                        onClick={() => handleDeleteComment(c.commentId)}
+                      />
                     </div>
+                    <p className='comment__text'>{c.content}</p>
                   </div>
-                ))
-              )}
+                </div>
+              ))}
             </div>
           )}
         </div>
       </div>
+
       {deletePopup.open && (
         <Delete
-          id={postId}
-          // data={data}
-          // setData={setData}
+          id={selectedCommentId}
           setDeletePopup={setDeletePopup}
           deletePopup={deletePopup}
-          fetchPostDetail={() => fetchPostDetail(id)}
+          onConfirmDelete={() => performDeleteComment(selectedCommentId)}
         />
       )}
     </div>

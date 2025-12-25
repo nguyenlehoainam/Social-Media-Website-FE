@@ -29,12 +29,112 @@
       "generation": 16,
       "status": "INACTIVE",
       "majors": "Computer Science"
+    },
+    {
+      "id": "u4",
+      "username": "lehoanglong",
+      "fullName": "Lê Hoàng Long",
+      "avatar": "https://ui-avatars.com/api/?name=Le+Hoang+Long&background=random",
+      "role": "VICE_LEADER",
+      "generation": 15,
+      "status": "ACTIVE",
+      "majors": "Software Engineering"
+    },
+    {
+      "id": "u5",
+      "username": "phamminhtuan",
+      "fullName": "Phạm Minh Tuấn",
+      "avatar": "https://ui-avatars.com/api/?name=Pham+Minh+Tuan&background=random",
+      "role": "MEMBER",
+      "generation": 16,
+      "status": "ACTIVE",
+      "majors": "Computer Science"
+    },
+    {
+      "id": "u6",
+      "username": "hoangthuthao",
+      "fullName": "Hoàng Thu Thảo",
+      "avatar": "https://ui-avatars.com/api/?name=Hoang+Thu+Thao&background=random",
+      "role": "MEMBER",
+      "generation": 14,
+      "status": "ACTIVE",
+      "majors": "Information System"
+    },
+    {
+      "id": "u7",
+      "username": "dohungdung",
+      "fullName": "Đỗ Hùng Dũng",
+      "avatar": "https://ui-avatars.com/api/?name=Do+Hung+Dung&background=random",
+      "role": "MEMBER",
+      "generation": 15,
+      "status": "ACTIVE",
+      "majors": "Cyber Security"
+    },
+    {
+      "id": "u8",
+      "username": "nguyenthimai",
+      "fullName": "Nguyễn Thị Mai",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Thi+Mai&background=random",
+      "role": "MEMBER",
+      "generation": 16,
+      "status": "ACTIVE",
+      "majors": "Data Science"
+    },
+    {
+      "id": "u9",
+      "username": "buianhduc",
+      "fullName": "Bùi Anh Đức",
+      "avatar": "https://ui-avatars.com/api/?name=Bui+Anh+Duc&background=random",
+      "role": "MEMBER",
+      "generation": 15,
+      "status": "INACTIVE",
+      "majors": "Software Engineering"
+    },
+    {
+      "id": "u10",
+      "username": "vuhaiyen",
+      "fullName": "Vũ Hải Yến",
+      "avatar": "https://ui-avatars.com/api/?name=Vu+Hai+Yen&background=random",
+      "role": "MEMBER",
+      "generation": 14,
+      "status": "ACTIVE",
+      "majors": "AI & Robotics"
+    },
+    {
+      "id": "u11",
+      "username": "tranquoctbao",
+      "fullName": "Trần Quốc Bảo",
+      "avatar": "https://ui-avatars.com/api/?name=Tran+Quoc+Bao&background=random",
+      "role": "MEMBER",
+      "generation": 15,
+      "status": "ACTIVE",
+      "majors": "Computer Networks"
+    },
+    {
+      "id": "u12",
+      "username": "phanthanhtung",
+      "fullName": "Phan Thanh Tùng",
+      "avatar": "https://ui-avatars.com/api/?name=Phan+Thanh+Tung&background=random",
+      "role": "MEMBER",
+      "generation": 16,
+      "status": "ACTIVE",
+      "majors": "Information Technology"
+    },
+    {
+      "id": "u13",
+      "username": "nguyenthuylinh",
+      "fullName": "Nguyễn Thùy Linh",
+      "avatar": "https://ui-avatars.com/api/?name=Nguyen+Thuy+Linh&background=random",
+      "role": "MEMBER",
+      "generation": 15,
+      "status": "ACTIVE",
+      "majors": "Software Engineering"
     }
   ],
   "pagination": {
     "page": 1,
     "limit": 10,
-    "totalRows": 50,
-    "totalPages": 5
+    "totalRows": 13,
+    "totalPages": 2
   }
 }

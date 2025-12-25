@@ -21,9 +21,7 @@ const Sidebar = () => {
           {' '}
           <FaUserGroup size={30} /> <p>Quản lý thành viên</p>
         </li>
-        <li>
-          <BiSolidCalendarMinus size={30} /> <p>Quản lý sự kiện</p>
-        </li>
+
         <li>
           <RiLogoutBoxRFill size={30} /> <p>Đăng xuất</p>{' '}
         </li>

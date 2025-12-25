@@ -1,20 +1,19 @@
-@use "../../styles//index" as style;
+@use '../../styles//index' as style;
 
-.admin{
-    &__header{ 
-        color: style.$secondary-color;
-        font-weight: 700;
-        font-size: 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        &--avatar{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
+.admin {
+  &__header {
+    color: #588ab8;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    &--avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
     }
-
+  }
 }

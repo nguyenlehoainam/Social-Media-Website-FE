@@ -4,7 +4,7 @@
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 24px;
-    color: style.$secondary-color;
+    color: #588ab8;
   }
 
   .members-toolbar {
@@ -35,18 +35,18 @@
         font-size: 14px;
         border: none;
         &--search {
-          background-color: style.$secondary-color;
+          background-color: #588ab8;
         }
 
         &--add {
-          background-color: style.$secondary-color;
+          background-color: #588ab8;
         }
 
         &--import {
-          background-color: style.$secondary-color;
+          background-color: #588ab8;
         }
         &:hover {
-          background-color: #f57c00;
+          background-color: #8d9ac5;
         }
       }
     }
@@ -78,17 +78,16 @@
     }
   }
 
-  .button--restore{
+  .button--restore {
     // width: 90px;
     width: 88%;
     background-color: #4096ff;
-      color: white;
-    &:hover{
+    color: white;
+    &:hover {
       // background-color: #d4d2d2;
       background-color: #1677ff;
       color: white;
     }
-
   }
 
   .ant-table-tbody > tr > td {

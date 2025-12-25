@@ -1,43 +1,43 @@
-@use "../../../styles/index" as style;
+@use '../../../styles/index' as style;
 
 .admin {
-    &__sidebar {
-        width: 300px;
-        background-color: #ec7f44;
-        color: white;
-        height: 100vh;
+  &__sidebar {
+    width: 300px;
+    background-color: #2d5071;
+    color: white;
+    height: 100vh;
 
-        &__image {
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-        }
-
-        &__menu {
-            li {
-                list-style-type: none;
-                border: 1px solid #FFA573;
-                font-weight: 500;
-                font-size: 18px;
-                padding: 20px 20px;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                transition: background-color 0.3s, color 0.3s;
-
-                &:hover {
-                    background-color: style.$secondary-color;
-                    color: white;
-                }
-
-                &.active {
-                    background-color: white;
-                    color: style.$secondary-color;
-                    font-weight: 700;
-                    // border-left: 4px solid style.$secondary-color;
-                }
-            }
-        }
+    &__image {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
     }
+
+    &__menu {
+      li {
+        list-style-type: none;
+        border: 1px solid #8d9ac5;
+        font-weight: 500;
+        font-size: 18px;
+        padding: 20px 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+          background-color: style.$secondary-color;
+          color: white;
+        }
+
+        &.active {
+          background-color: white;
+          color: style.$secondary-color;
+          font-weight: 700;
+          // border-left: 4px solid style.$secondary-color;
+        }
+      }
+    }
+  }
 }
