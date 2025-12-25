@@ -112,25 +112,3 @@ _(Thay thế các đường dẫn bên dưới bằng ảnh chụp màn hình th
     _Ứng dụng sẽ chạy tại: `http://localhost:3000`_
 
 ---
-
-## 📂 Cấu Trúc Thư Mục
-
-```text
-VinBook/
-├── backend/                # Source code Spring Boot
-│   ├── src/main/java/com/vinbook
-│   │   ├── config/         # Security & App Config
-│   │   ├── controller/     # API Controllers
-│   │   ├── entity/         # Database Models
-│   │   ├── repository/     # Data Access Layer
-│   │   └── service/        # Business Logic Layer
-│   └── Dockerfile
-│
-└── frontend/               # Source code ReactJS
-    ├── src/
-    │   ├── components/     # UI Components (Header, Post...)
-    │   ├── pages/          # Page Views (Login, Home, Profile...)
-    │   ├── redux/          # Redux Slices
-    │   └── services/       # API Calls (Axios)
-    └── package.json
-```
