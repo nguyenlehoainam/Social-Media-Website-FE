@@ -2,8 +2,6 @@
 
 **VinBook** là dự án xây dựng một nền tảng mạng xã hội thu nhỏ, cho phép người dùng kết nối, chia sẻ khoảnh khắc và tương tác với nhau. Dự án được phát triển với kiến trúc **Client-Server**, sử dụng **ReactJS (SPA)** cho Frontend và **Spring Boot (RESTful API)** cho Backend.
 
-![Giao diện](./assets/demo.png)
-
 > **Trạng thái:** Đang phát triển
 > **Demo:** 
 > **API Documentation:** 
@@ -54,7 +52,7 @@ Dự án bao gồm các chức năng cốt lõi của một mạng xã hội hi�
 
 | Trang chủ (Newsfeed) | Tạo bài viết (Modal) |
 |:---:|:---:|
-| ![Home](https://via.placeholder.com/600x400?text=Newsfeed+Screenshot) | ![Create Post](https://via.placeholder.com/600x400?text=Create+Post+Screenshot) |
+| ![Home]() | ![Create Post](https://via.placeholder.com/600x400?text=Create+Post+Screenshot) |
 
 | Trang cá nhân (Profile) | Chi tiết bài viết |
 |:---:|:---:|
